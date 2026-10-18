@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs><radialGradient id="g" cx="30%" cy="25%" r="90%"><stop offset="0" stop-color="#ff5a1f" stop-opacity="0.35"/><stop offset="1" stop-color="#2b0d06" stop-opacity="0"/></radialGradient></defs>
+  <rect width="800" height="600" fill="#2b0d06"/>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <circle cx="400" cy="300" r="40" stroke="#ff5a1f" stroke-opacity="0.95" stroke-width="3" fill="none"/><circle cx="400" cy="300" r="88" stroke="#ff5a1f" stroke-opacity="0.82" stroke-width="3" fill="none"/><circle cx="400" cy="300" r="136" stroke="#ff5a1f" stroke-opacity="0.69" stroke-width="3" fill="none"/><circle cx="400" cy="300" r="184" stroke="#ff5a1f" stroke-opacity="0.5599999999999999" stroke-width="3" fill="none"/><circle cx="400" cy="300" r="232" stroke="#ff5a1f" stroke-opacity="0.42999999999999994" stroke-width="3" fill="none"/><circle cx="400" cy="300" r="280" stroke="#ff5a1f" stroke-opacity="0.29999999999999993" stroke-width="3" fill="none"/><circle cx="400" cy="300" r="328" stroke="#ff5a1f" stroke-opacity="0.16999999999999993" stroke-width="3" fill="none"/>
+</svg>

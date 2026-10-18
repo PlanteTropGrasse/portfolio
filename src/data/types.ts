@@ -1,0 +1,45 @@
+export type ProjectCategory = 'Professional' | 'Student' | 'Personal';
+
+export type Project = {
+  title: string;
+  duration: string; // e.g. "8 months (Oct 2024 - May 2025)"
+  role: string; // e.g. "Intern / Freelance"
+  tags: string[]; // e.g. ["Game Design", "Multiplayer"]
+  category: ProjectCategory;
+  description: string;
+  image: string; // path under public/, e.g. "/projects/tidebound.svg"
+  imageAlt: string;
+};
+
+export type Experience = {
+  title: string; // e.g. "Game Design Intern"
+  company: string;
+  duration: string;
+  project?: string;
+  bullets: string[];
+};
+
+export type Education = {
+  degree: string;
+  school: string;
+  duration: string;
+  detail: string;
+};
+
+export type Skill = {
+  name: string;
+  detail: string;
+};
+
+export type SectionId = 'Home' | 'Projects' | 'AboutMe';
+
+export type NavSection = {
+  id: SectionId;
+  label: string;
+};
+
+export type SocialLink = {
+  label: string;
+  url: string;
+  icon: 'linkedin' | 'artstation';
+};

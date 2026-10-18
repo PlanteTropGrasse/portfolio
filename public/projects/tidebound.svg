@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+  <defs><radialGradient id="g" cx="30%" cy="25%" r="90%"><stop offset="0" stop-color="#1fa3a8" stop-opacity="0.35"/><stop offset="1" stop-color="#0f3b4f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="800" height="600" fill="#0f3b4f"/>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <path d="M0 180 Q 200 140 400 180 T 800 180" stroke="#1fa3a8" stroke-opacity="0.9" stroke-width="3" fill="none"/><path d="M0 214 Q 200 174 400 214 T 800 214" stroke="#1fa3a8" stroke-opacity="0.78" stroke-width="3" fill="none"/><path d="M0 248 Q 200 208 400 248 T 800 248" stroke="#1fa3a8" stroke-opacity="0.66" stroke-width="3" fill="none"/><path d="M0 282 Q 200 242 400 282 T 800 282" stroke="#1fa3a8" stroke-opacity="0.54" stroke-width="3" fill="none"/><path d="M0 316 Q 200 276 400 316 T 800 316" stroke="#1fa3a8" stroke-opacity="0.42000000000000004" stroke-width="3" fill="none"/><path d="M0 350 Q 200 310 400 350 T 800 350" stroke="#1fa3a8" stroke-opacity="0.30000000000000004" stroke-width="3" fill="none"/><path d="M0 384 Q 200 344 400 384 T 800 384" stroke="#1fa3a8" stroke-opacity="0.18000000000000005" stroke-width="3" fill="none"/>
+</svg>
