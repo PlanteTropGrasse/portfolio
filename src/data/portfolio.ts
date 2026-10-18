@@ -19,19 +19,19 @@ export const sections: NavSection[] = [
 export const profile = {
   firstName: 'Adrian',
   lastName: 'Proust',
-  title: 'Junior Game Designer',
-  currentStudio: 'Brightwave Studio',
+  title: 'Game Designer',
+  currentStudio: 'ICAN',
   yearsOfExperience: 2,
-  shippedTitles: 2,
-  location: 'Lyon, France',
-  availability: 'Open to freelance & full-time roles',
+  shippedTitles: 6,
+  location: 'Paris / France',
+  availability: 'Open to opportunities',
 };
 
 export const contact = {
-  email: 'adrian.proust@example.com',
+  email: '3092hproust@gmail.com',
   linkedin: { label: 'Adrian Proust', url: 'https://www.linkedin.com/in/adrian-proust' },
-  artstation: { label: 'adrianproust', url: 'https://www.artstation.com/adrianproust' },
-  phone: '+33 6 00 00 00 00',
+  artstation: { label: 'adrian_proust', url: 'https://adrian_proust.artstation.com/' },
+  phone: '',
 };
 
 // Icon links shown in the top navigation bar.
@@ -41,110 +41,143 @@ export const socials: SocialLink[] = [
 ];
 
 export const about = {
-  lead: 'I design games that are easy to pick up and hard to put down.',
+  lead: 'Franco-espagnol diplômé d’un master en game design à l’ICAN.',
   paragraphs: [
-    "I'm Adrian, a junior game designer who loves systems you can read at a glance and master over hundreds of hours. My focus genres are co-op multiplayer, roguelites and tactical action — games where every player decision leaves a visible mark on the run.",
-    'Today I split my time between the final year of my Game Design degree and freelance work at Brightwave Studio, where I prototype features, write design documentation and run playtests every sprint. I think in spreadsheets, blockouts and paper prototypes long before anything touches an engine.',
+    'Ce portfolio présente un aperçu de ma réflexion créative explorée ces dernières années à travers différents projets et domaines : jeux vidéo, expériences de team-building, projets techniques C++ & C#, et créations audiovisuelles.',
+    'Passionné par la conception de systèmes interactifs engageants et équilibrés, je conçois des mécaniques lisibles, dynamiques et mémorables, de la formalisation sur papier jusqu’au prototypage sur moteur.',
   ],
 };
 
 export const skills: Skill[] = [
-  { name: 'Systems Design', detail: 'Core loops, progression, economy and balancing spreadsheets' },
-  { name: 'Level Design', detail: 'Blockouts, pacing, player guidance and readability' },
-  { name: 'Gameplay Prototyping', detail: 'Fast iteration in Unity (C#) and Unreal (Blueprints)' },
-  { name: 'Design Documentation', detail: 'GDDs, one-pagers, feature specs and flowcharts' },
-  { name: 'Playtesting & Analysis', detail: 'Test protocols, surveys and turning feedback into tasks' },
-  { name: 'Game Feel & UX', detail: 'Feedback, onboarding and moment-to-moment controls' },
+  { name: 'Game & Systems Design', detail: 'Boucles de gameplay, équilibrage, conception de règles et mécaniques interactives' },
+  { name: 'Level Design & Rythme', detail: 'Pacing, lisibilité spatiale, guidage du joueur et agencement d’épreuves' },
+  { name: 'Prototypage Moteur', detail: 'Itération rapide sous Unity (C#) et Unreal Engine (Blueprints)' },
+  { name: 'Programmation Gameplay', detail: 'Développement de logique de jeu en C#, C++ et intégration d’outils' },
+  { name: 'Game Feel & UX', detail: 'Feedbacks visuels/sonores, ergonomie des interfaces et onboarding intuitif' },
+  { name: 'Conception d’Événements', detail: 'Design d’activités de team-building, escape games et formats immersifs' },
 ];
 
 export const secondarySkills: string[] = [
   'Unity / C#',
-  'Unreal Engine 5',
-  'Figma',
-  'Miro',
-  'Jira & Notion',
-  'Blender (basics)',
-  'Pixel art',
-  'Scrum / Agile',
-  'French (native)',
-  'English (C1)',
+  'Unreal Engine',
+  'C / C++',
+  'Team-Building Design',
+  'Arts & VFX',
+  'Courts-métrages / Vidéo',
+  'Git / Versioning',
+  'Game Design Docs (GDD)',
+  'Français (natif)',
+  'Espagnol (bilingue)',
+  'Anglais (courant)',
 ];
 
 // The three project categories, in the order they appear on the home page.
 export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
-  { id: 'Professional', blurb: 'Studio work and shipped titles' },
-  { id: 'Student', blurb: 'Game design school productions' },
-  { id: 'Personal', blurb: 'Game jams and solo prototypes' },
+  { id: 'Student', blurb: 'Projets majeurs de cursus et diplôme à l’ICAN' },
+  { id: 'Personal', blurb: 'Prototypes, game jams et expérimentations personnelles' },
+  { id: 'Professional', blurb: 'Activités de team-building et conceptions immersives' },
 ];
 
 // Ordered from most recent to oldest — the home page previews the first entries of each category.
-// Replace the placeholder images in public/projects/ with real screenshots (any format works).
 export const projects: Project[] = [
   {
-    title: 'Tidebound',
-    duration: '8 months (Oct 2024 - May 2025)',
-    role: 'Intern / Freelance',
-    tags: ['Game Design', 'Multiplayer', 'Co-op'],
-    category: 'Professional',
-    description:
-      'A 4-player co-op sailing roguelite released on Steam. I designed the crew-role system and balanced the upgrade economy across 40+ playtest sessions.',
-    image: '/projects/tidebound.svg',
-    imageAlt: 'Junior Game Designer cover art',
-  },
-  {
-    title: 'Driftline',
-    duration: '6 weeks (Feb 2025 - Mar 2025)',
-    role: 'Solo Designer',
-    tags: ['Prototype', 'Racing', 'Physics'],
-    category: 'Personal',
-    description:
-      'A drift-to-charge arcade racer prototype exploring how a single input can drive both steering and a boost resource.',
-    image: '/projects/driftline.svg',
-    imageAlt: 'Driftline cover art',
-  },
-  {
-    title: 'Hollow Signal',
-    duration: '4 months (Jan 2024 - Apr 2024)',
-    role: 'Lead Game Designer',
-    tags: ['Level Design', 'Narrative', 'Horror'],
-    category: 'Student',
-    description:
-      'A first-person radio-horror game made by a team of 7. I owned the level layout and the sound-based navigation mechanic.',
-    image: '/projects/hollow-signal.svg',
-    imageAlt: 'Hollow Signal cover art',
-  },
-  {
-    title: 'Pocket Siege',
-    duration: '6 months (Jun 2023 - Nov 2023)',
-    role: 'Systems Designer',
-    tags: ['Mobile', 'Tower Defense', 'Economy'],
-    category: 'Professional',
-    description:
-      'A free-to-play mobile tower defense game. I tuned wave difficulty curves and designed the daily challenge mode.',
-    image: '/projects/pocket-siege.svg',
-    imageAlt: 'Pocket Siege cover art',
-  },
-  {
-    title: 'Ember Rites',
-    duration: '48 hours (Jan 2024)',
+    title: 'Bastos',
+    duration: 'Projet Jeu Vidéo',
     role: 'Game Designer',
-    tags: ['Game Jam', 'Action', 'Local Multiplayer'],
-    category: 'Personal',
-    description:
-      'A couch-versus game made during a game jam: players share a single torch, and whoever holds it can see — but is also seen.',
-    image: '/projects/ember-rites.svg',
-    imageAlt: 'Ember Rites cover art',
-  },
-  {
-    title: 'Atlas of Echoes',
-    duration: '3 months (Mar 2023 - May 2023)',
-    role: 'Level & Puzzle Designer',
-    tags: ['Puzzle', 'Exploration', '3D'],
+    tags: ['Game Design', 'Action', 'Systèmes', 'Tir'],
     category: 'Student',
     description:
-      'A contemplative puzzle-exploration game where sound waves reveal hidden geometry. I designed 12 puzzle rooms and their difficulty ramp.',
+      'Chaque balle compte quand elles ont toutes un effet spécial. Un jeu nerveux explorant une économie tactique de munitions aux propriétés distinctes.',
+    image: '/projects/tidebound.svg',
+    imageAlt: 'Bastos cover art',
+  },
+  {
+    title: 'SYZYGY',
+    duration: 'Projet Multijoueur',
+    role: 'Game Designer',
+    tags: ['Duel', 'Multijoueur en ligne', 'Stratégie', 'Puzzle'],
+    category: 'Student',
+    description:
+      'Un duel mystique en ligne où deux joueurs s’affrontent pour aligner des astres et manipuler le destin à travers des mécaniques d’alignement et de contrôle.',
     image: '/projects/atlas-of-echoes.svg',
-    imageAlt: 'Atlas of Echoes cover art',
+    imageAlt: 'SYZYGY cover art',
+  },
+  {
+    title: 'Excroalibur',
+    duration: 'Projet Tour par Tour',
+    role: 'Lead Designer',
+    tags: ['Tour par tour', 'Tactique', 'Survie', 'Coopération'],
+    category: 'Student',
+    description:
+      'Une revisite du jeu du taureau en jeu tour par tour, dans laquelle le joueur doit protéger une épée d’une horde incessante en la passant d’un personnage à un autre.',
+    image: '/projects/hollow-signal.svg',
+    imageAlt: 'Excroalibur cover art',
+  },
+  {
+    title: 'Le POWER Quiz',
+    duration: 'Expérience Interactive',
+    role: 'Game & Systems Designer',
+    tags: ['Team-Building', 'Quiz interactif', 'Party Game'],
+    category: 'Professional',
+    description:
+      'Le grand quiz indémodable revisité avec des pouvoirs spéciaux pour saboter ses adversaires et renverser les scores en temps réel.',
+    image: '/projects/pocket-siege.svg',
+    imageAlt: 'Le POWER quiz cover art',
+  },
+  {
+    title: 'Les LEGO des Pharaons',
+    duration: 'Expérience Grand Format',
+    role: 'Concepteur & Animateur',
+    tags: ['Team-Building', 'Événementiel', 'Immersion', 'Coopération'],
+    category: 'Professional',
+    description:
+      'Une version à taille humaine du célèbre jeu de briques dans une thématique Égypte Antique, favorisant communication et créativité collective.',
+    image: '/projects/driftline.svg',
+    imageAlt: 'Les LEGO des pharaons cover art',
+  },
+  {
+    title: 'Le Cirque de l’IA',
+    duration: 'Jeu Jam & Prototype',
+    role: 'Game & Concept Designer',
+    tags: ['Jeu Jam', 'IA Concept', 'Narrative Design'],
+    category: 'Personal',
+    description:
+      'Faire un jeu autour de l’intelligence artificielle et de ses travers : une expérience satirique questionnant notre rapport aux modèles automatisés.',
+    image: '/projects/ember-rites.svg',
+    imageAlt: 'Le cirque de l’IA cover art',
+  },
+  {
+    title: 'GoGolem',
+    duration: 'Prototype Réflexion',
+    role: 'Game & Level Designer',
+    tags: ['Puzzle', 'Mécaniques', 'Prototypage'],
+    category: 'Personal',
+    description:
+      'Jeu d’énigmes centré sur le guidage et la manipulation de golems aux capacités élémentaires complémentaires.',
+    image: '/projects/atlas-of-echoes.svg',
+    imageAlt: 'GoGolem cover art',
+  },
+  {
+    title: 'Simulation d’une Fourmi & 2048 en C++',
+    duration: 'Projet Technique',
+    role: 'Développeur / Gameplay Programmer',
+    tags: ['C++', 'Algorithmes', 'Simulation', 'Programmation'],
+    category: 'Personal',
+    description:
+      'Développements de simulations comportementales (colonie et déplacements d’agents) et recréation optimisée d’un moteur de jeu 2048 en C++.',
+    image: '/projects/hollow-signal.svg',
+    imageAlt: 'Simulation C++ cover art',
+  },
+  {
+    title: 'Courts-métrages & Créations VFX',
+    duration: 'Projets Audiovisuels',
+    role: 'Réalisateur & Artiste VFX',
+    tags: ['Audiovisuel', 'VFX', 'Animation Lego', 'GeoGebra'],
+    category: 'Personal',
+    description:
+      'Exploration cinématographique et d’effets visuels : réalisation de courts-métrages en stop-motion Lego et animations mathématiques avec GeoGebra.',
+    image: '/projects/driftline.svg',
+    imageAlt: 'Courts-métrages cover art',
   },
 ];
 
@@ -153,50 +186,39 @@ export const RECENT_PROJECTS_COUNT = 3;
 
 export const experiences: Experience[] = [
   {
-    title: 'Freelance Game Designer',
-    company: 'Brightwave Studio',
-    duration: 'Jun 2025 - Present',
-    project: 'Unannounced co-op title',
+    title: 'Game & Systems Designer',
+    company: 'Projets Indépendants & Collectifs',
+    duration: '2023 - Présent',
+    project: 'Bastos, SYZYGY, Excroalibur',
     bullets: [
-      'Prototype new combat and traversal features in Unreal Engine 5 Blueprints.',
-      'Write and maintain feature specs shared with art, code and QA.',
-      'Run bi-weekly internal playtests and turn results into prioritised backlog items.',
+      'Conception de systèmes complets de règles, d’équilibrage et de progression sur des projets solo et en équipe.',
+      'Prototypage rapide sous moteurs de jeu et validation par des sessions de playtests régulières.',
+      'Rédaction de Game Design Documents (GDD) et communication des intentions créatives auprès des artistes et développeurs.',
     ],
   },
   {
-    title: 'Game Design Intern',
-    company: 'Brightwave Studio',
-    duration: 'Oct 2024 - May 2025',
-    project: 'Tidebound',
+    title: 'Concepteur d’Expériences & Team-Building',
+    company: 'Événementiel & Team-Building',
+    duration: '2022 - 2024',
+    project: 'Le POWER Quiz, Les LEGO des Pharaons',
     bullets: [
-      'Designed the crew-role system that became the core of the co-op experience.',
-      'Balanced the upgrade economy with spreadsheets and telemetry from 40+ sessions.',
-      'Shipped the game on Steam with a "Very Positive" launch reception.',
-    ],
-  },
-  {
-    title: 'Junior Systems Designer (Contract)',
-    company: 'Lumen Mobile Games',
-    duration: 'Jun 2023 - Nov 2023',
-    project: 'Pocket Siege',
-    bullets: [
-      'Tuned wave difficulty curves for 60 launch levels.',
-      'Designed the daily challenge mode, raising day-7 retention in soft launch.',
+      'Création et animation de dispositifs ludiques grandeur nature favorisant la cohésion d’équipe et l’engagement.',
+      'Équilibrage des mécaniques de scoring et des pouvoirs interactifs pour garantir convivialité et rejouabilité.',
     ],
   },
 ];
 
 export const education: Education[] = [
   {
-    degree: "Bachelor's degree in Game Design",
-    school: 'Game Design School, Lyon',
-    duration: '2022 - 2026',
-    detail: 'Systems design, level design, prototyping and production in multidisciplinary teams.',
+    degree: 'Master en Game Design',
+    school: 'ICAN (Institut de Création et Animation Numériques)',
+    duration: 'Diplômé',
+    detail: 'Spécialisation en Game Design, conception de systèmes de jeu, prototypage interactif et gestion de production de jeux vidéo.',
   },
   {
-    degree: 'Baccalauréat — Science major',
-    school: 'Lycée, Lyon',
-    duration: '2022',
-    detail: 'Mathematics and computer science specialisation.',
+    degree: 'Formation Générale & Scientifique',
+    school: 'Enseignement Supérieur',
+    duration: 'Cursus initial',
+    detail: 'Bases solides en mathématiques, algorithmique, logique de programmation C++ / C# et modélisation.',
   },
 ];
