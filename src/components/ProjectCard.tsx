@@ -10,6 +10,10 @@ const badgeModifier = (category: Project['category']) =>
   category.toLowerCase().replace(/\s+/g, '-');
 
 export default function ProjectCard({ project, index }: Props) {
+  const imageSrc = project.image.startsWith('/')
+    ? `${import.meta.env.BASE_URL}${project.image.slice(1)}`
+    : project.image;
+
   return (
     <article
       className="project-card reveal"
@@ -17,7 +21,7 @@ export default function ProjectCard({ project, index }: Props) {
       style={{ transitionDelay: `${(index % 3) * 90}ms` }}
     >
       <div className="project-card__media">
-        <img src={project.image} alt={project.imageAlt} loading="lazy" />
+        <img src={imageSrc} alt={project.imageAlt} loading="lazy" />
         <div className="project-card__overlay">
           <p className="project-card__desc">{project.description}</p>
           <ul className="chips" aria-label="Role and tags">
