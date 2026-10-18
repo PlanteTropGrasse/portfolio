@@ -23,7 +23,7 @@ export const profile = {
   currentStudio: 'ICAN',
   yearsOfExperience: 2,
   shippedTitles: 6,
-  location: 'Paris / France',
+  location: 'Paris, France',
   availability: 'Open to opportunities',
 };
 
@@ -41,20 +41,20 @@ export const socials: SocialLink[] = [
 ];
 
 export const about = {
-  lead: 'Franco-espagnol diplômé d’un master en game design à l’ICAN.',
+  lead: 'French-Spanish Game Design Master’s graduate from ICAN.',
   paragraphs: [
-    'Ce portfolio présente un aperçu de ma réflexion créative explorée ces dernières années à travers différents projets et domaines : jeux vidéo, expériences de team-building, projets techniques C++ & C#, et créations audiovisuelles.',
-    'Passionné par la conception de systèmes interactifs engageants et équilibrés, je conçois des mécaniques lisibles, dynamiques et mémorables, de la formalisation sur papier jusqu’au prototypage sur moteur.',
+    'This portfolio showcases my creative process and design thinking explored across video games, team-building activities, technical C++ & C# projects, and audiovisual productions.',
+    'Passionate about designing engaging and well-balanced interactive systems, I create clear, dynamic, and memorable mechanics, from paper prototyping and documentation to engine implementation.',
   ],
 };
 
 export const skills: Skill[] = [
-  { name: 'Game & Systems Design', detail: 'Boucles de gameplay, équilibrage, conception de règles et mécaniques interactives' },
-  { name: 'Level Design & Rythme', detail: 'Pacing, lisibilité spatiale, guidage du joueur et agencement d’épreuves' },
-  { name: 'Prototypage Moteur', detail: 'Itération rapide sous Unity (C#) et Unreal Engine (Blueprints)' },
-  { name: 'Programmation Gameplay', detail: 'Développement de logique de jeu en C#, C++ et intégration d’outils' },
-  { name: 'Game Feel & UX', detail: 'Feedbacks visuels/sonores, ergonomie des interfaces et onboarding intuitif' },
-  { name: 'Conception d’Événements', detail: 'Design d’activités de team-building, escape games et formats immersifs' },
+  { name: 'Game & Systems Design', detail: 'Core gameplay loops, balancing, interactive mechanics and rules design' },
+  { name: 'Level Design & Pacing', detail: 'Player flow, spatial readability, guidance and encounter sequencing' },
+  { name: 'Engine Prototyping', detail: 'Rapid iteration in Unity (C#) and Unreal Engine (Blueprints)' },
+  { name: 'Gameplay Programming', detail: 'Gameplay logic implementation in C# and C++, custom tooling integration' },
+  { name: 'Game Feel & UX', detail: 'Visual/audio feedback, interface ergonomics and intuitive onboarding' },
+  { name: 'Event & Experience Design', detail: 'Design of real-life team-building games, escape formats and immersive challenges' },
 ];
 
 export const secondarySkills: string[] = [
@@ -63,143 +63,143 @@ export const secondarySkills: string[] = [
   'C / C++',
   'Team-Building Design',
   'Arts & VFX',
-  'Courts-métrages / Vidéo',
-  'Git / Versioning',
+  'Short Films & Video',
+  'Git / Version Control',
   'Game Design Docs (GDD)',
-  'Français (natif)',
-  'Espagnol (bilingue)',
-  'Anglais (courant)',
+  'French (Native)',
+  'Spanish (Bilingual)',
+  'English (Fluent)',
 ];
 
 // The three project categories, in the order they appear on the home page.
 export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
-  { id: 'Student', blurb: 'Projets majeurs de cursus et diplôme à l’ICAN' },
-  { id: 'Personal', blurb: 'Prototypes, game jams et expérimentations personnelles' },
-  { id: 'Professional', blurb: 'Activités de team-building et conceptions immersives' },
+  { id: 'Student', blurb: 'Major school productions and graduation projects at ICAN' },
+  { id: 'Personal', blurb: 'Prototypes, game jams and personal experiments' },
+  { id: 'Professional', blurb: 'Large-scale team-building and immersive real-life activities' },
 ];
 
 // Ordered from most recent to oldest — the home page previews the first entries of each category.
 export const projects: Project[] = [
   {
     title: 'Bastos',
-    duration: 'Projet Jeu Vidéo',
+    duration: 'Video Game Project',
     role: 'Game Designer',
-    tags: ['Game Design', 'Action', 'Systèmes', 'Tir'],
+    tags: ['Game Design', 'Action', 'Systems', 'Shooter'],
     category: 'Student',
     description:
-      'Chaque balle compte quand elles ont toutes un effet spécial. Un jeu nerveux explorant une économie tactique de munitions aux propriétés distinctes.',
+      'Every bullet counts when each one has a special effect. A fast-paced shooter built around tactical resource management with distinctive ammunition behaviors.',
     image: '/projects/bastos.jpg',
-    imageAlt: 'Bastos - Chaque balle compte',
+    imageAlt: 'Bastos - Every bullet counts',
   },
   {
     title: 'SYZYGY',
-    duration: 'Projet Multijoueur',
+    duration: 'Multiplayer Project',
     role: 'Game Designer',
-    tags: ['Duel', 'Multijoueur en ligne', 'Stratégie', 'Puzzle'],
+    tags: ['Duel', 'Online Multiplayer', 'Strategy', 'Puzzle'],
     category: 'Student',
     description:
-      'Un duel mystique en ligne où deux joueurs s’affrontent pour aligner des astres et manipuler le destin à travers des mécaniques d’alignement et de contrôle.',
+      'A mystical online duel where two players battle to align celestial bodies and manipulate destiny using alignment mechanics and spatial control.',
     image: '/projects/syzygy.webp',
-    imageAlt: 'SYZYGY - Duel mystique en ligne',
+    imageAlt: 'SYZYGY - Mystical online duel',
   },
   {
     title: 'Excroalibur',
-    duration: 'Projet Tour par Tour',
+    duration: 'Turn-Based Project',
     role: 'Lead Designer',
-    tags: ['Tour par tour', 'Tactique', 'Survie', 'Coopération'],
+    tags: ['Turn-Based', 'Tactics', 'Survival', 'Co-op'],
     category: 'Student',
     description:
-      'Une revisite du jeu du taureau en jeu tour par tour, dans laquelle le joueur doit protéger une épée d’une horde incessante en la passant d’un personnage à un autre.',
+      'A turn-based twist on the bull game: players must protect a legendary sword from an overwhelming horde by passing it between characters at the right moment.',
     image: '/projects/excroalibur.png',
-    imageAlt: 'Excroalibur - Protéger l’épée',
+    imageAlt: 'Excroalibur - Protect the sword',
   },
   {
     title: 'Sang%',
-    duration: 'Projet Jeu de Tir',
+    duration: 'Arena Shooter Project',
     role: 'Game Designer',
-    tags: ['Arène', 'Tir', 'Sacrifice', 'Systèmes'],
+    tags: ['Arena', 'Shooter', 'Sacrifice', 'Systems'],
     category: 'Student',
     description:
-      'Et si dans un jeu de tir en arène le joueur devait sacrifier sa propre vie pour tirer ? Une boucle risque-récompense poussée à l’extrême.',
+      'What if in an arena shooter, every shot cost a portion of your own health? An extreme risk-reward loop pushed to its limits.',
     image: '/projects/sang-pourcent.png',
-    imageAlt: 'Sang% - Jeu de tir en arène',
+    imageAlt: 'Sang% - Arena shooter game',
   },
   {
-    title: 'Le POWER Quiz',
-    duration: 'Expérience Interactive',
+    title: 'The POWER Quiz',
+    duration: 'Interactive Experience',
     role: 'Game & Systems Designer',
-    tags: ['Team-Building', 'Quiz interactif', 'Party Game'],
+    tags: ['Team-Building', 'Interactive Quiz', 'Party Game'],
     category: 'Professional',
     description:
-      'Le grand quiz indémodable revisité avec des pouvoirs spéciaux pour saboter ses adversaires et renverser les scores en temps réel.',
+      'The timeless live quiz enhanced with special sabotage powers to disrupt opponents and overturn rankings in real time.',
     image: '/projects/power-quiz.jpg',
-    imageAlt: 'Le POWER Quiz - Dispositif interactif',
+    imageAlt: 'The POWER Quiz - Interactive live event',
   },
   {
-    title: 'Les LEGO des Pharaons',
-    duration: 'Expérience Grand Format',
-    role: 'Concepteur & Animateur',
-    tags: ['Team-Building', 'Événementiel', 'Immersion', 'Coopération'],
+    title: 'Pharaohs’ LEGO',
+    duration: 'Large-Scale Experience',
+    role: 'Designer & Facilitator',
+    tags: ['Team-Building', 'Live Event', 'Immersion', 'Cooperation'],
     category: 'Professional',
     description:
-      'Une version à taille humaine du célèbre jeu de briques dans une thématique Égypte Antique, favorisant communication et créativité collective.',
+      'A life-sized version of the famous brick-building game in an Ancient Egypt setting, promoting communication and collaborative problem-solving.',
     image: '/projects/lego-pharaons.jpg',
-    imageAlt: 'Les LEGO des Pharaons - Événementiel grandeur nature',
+    imageAlt: 'Pharaohs’ LEGO - Large-scale team building',
   },
   {
-    title: 'Le Cirque de l’IA',
-    duration: 'Jeu Jam & Prototype',
+    title: 'The AI Circus',
+    duration: 'Game Jam & Prototype',
     role: 'Game & Concept Designer',
-    tags: ['Jeu Jam', 'IA Concept', 'Narrative Design'],
+    tags: ['Game Jam', 'AI Concept', 'Narrative Design'],
     category: 'Personal',
     description:
-      'Faire un jeu autour de l’intelligence artificielle et de ses travers : une expérience satirique questionnant notre rapport aux modèles automatisés.',
+      'Can you build a game around artificial intelligence? A satirical interactive experience questioning our reliance on automated models.',
     image: '/projects/cirque-ia.jpg',
-    imageAlt: 'Le Cirque de l’IA - Concept & game jam',
+    imageAlt: 'The AI Circus - Jam prototype',
   },
   {
     title: 'Go Golem',
-    duration: 'Guerre de Territoire',
+    duration: 'Territory War Prototype',
     role: 'Game & Level Designer',
-    tags: ['Territoire', 'Stratégie', 'Multijoueur'],
+    tags: ['Territory Control', 'Strategy', 'Multiplayer'],
     category: 'Personal',
     description:
-      'Une guerre de territoire dans laquelle deux joueurs peuvent transformer et adapter les proportions du terrain.',
+      'A territory-control strategy game where two players dynamically morph and reshape battlefield proportions to outmaneuver each other.',
     image: '/projects/gogolem.png',
-    imageAlt: 'Go Golem - Guerre de territoire',
+    imageAlt: 'Go Golem - Territory war',
   },
   {
     title: 'Hansel & Gretel GO',
-    duration: 'Puzzle Game',
+    duration: 'Tactical Puzzle Game',
     role: 'Game & Level Designer',
-    tags: ['Puzzle Game', 'Grimm', 'Tour par tour'],
+    tags: ['Puzzle Game', 'Grimm Tales', 'Turn-Based'],
     category: 'Personal',
     description:
-      'Le puzzle game tactique style Hitman-GO rencontre l’univers des contes des frères Grimm.',
+      'A Hitman-GO style tactical puzzle game reimagined within the dark fantasy world of the Brothers Grimm fairy tales.',
     image: '/projects/hansel-gretel.png',
     imageAlt: 'Hansel & Gretel GO cover art',
   },
   {
-    title: 'Simulation d’une Fourmi & 2048 en C++',
-    duration: 'Projets C++ & Algorithmes',
-    role: 'Développeur / Gameplay Programmer',
-    tags: ['C++', 'Algorithmes', 'Simulation', 'Programmation'],
+    title: 'Ant Colony Simulation & 2048 in C++',
+    duration: 'C++ & Algorithm Projects',
+    role: 'Developer / Gameplay Programmer',
+    tags: ['C++', 'Algorithms', 'Simulation', 'Programming'],
     category: 'Personal',
     description:
-      'Simulation du comportement d’agents autonomes (colonie de fourmis) et recréation optimisée d’un moteur de jeu 2048 en C++.',
+      'Autonomous agent behavioral simulation (ant colony dynamics) and an optimized game engine recreation of 2048 in modern C++.',
     image: '/projects/simulation-fourmi.jpg',
-    imageAlt: 'Simulation comportementale en C++',
+    imageAlt: 'Behavioral simulation in C++',
   },
   {
-    title: 'Courts-métrages Lego & GeoGebra',
-    duration: 'Créations Audiovisuelles & VFX',
-    role: 'Réalisateur & Artiste VFX',
-    tags: ['Audiovisuel', 'VFX', 'Animation Lego', 'GeoGebra'],
+    title: 'Lego & GeoGebra Short Films',
+    duration: 'Audiovisual & VFX Projects',
+    role: 'Director & VFX Artist',
+    tags: ['Audiovisual', 'VFX', 'Lego Animation', 'GeoGebra'],
     category: 'Personal',
     description:
-      'Courts-métrages d’animation en briques Lego et animations géométriques GeoGebra avec travail d’effets visuels et de montage.',
+      'Stop-motion brick animation short films and mathematical GeoGebra animations featuring custom visual effects and video editing.',
     image: '/projects/court-metrage-lego.jpg',
-    imageAlt: 'Courts-métrages et animations',
+    imageAlt: 'Short films and animations',
   },
 ];
 
@@ -209,38 +209,38 @@ export const RECENT_PROJECTS_COUNT = 3;
 export const experiences: Experience[] = [
   {
     title: 'Game & Systems Designer',
-    company: 'Projets Indépendants & Collectifs',
-    duration: '2023 - Présent',
+    company: 'Independent & Collaborative Projects',
+    duration: '2023 - Present',
     project: 'Bastos, SYZYGY, Excroalibur',
     bullets: [
-      'Conception de systèmes complets de règles, d’équilibrage et de progression sur des projets solo et en équipe.',
-      'Prototypage rapide sous moteurs de jeu et validation par des sessions de playtests régulières.',
-      'Rédaction de Game Design Documents (GDD) et communication des intentions créatives auprès des artistes et développeurs.',
+      'Designed complete game mechanics, rules, and progression systems across solo and multidisciplinary team productions.',
+      'Prototyped features quickly in game engines and iterated based on structured playtest feedback.',
+      'Authored Game Design Documents (GDD) and communicated design intent clearly to programmers and artists.',
     ],
   },
   {
-    title: 'Concepteur d’Expériences & Team-Building',
-    company: 'Événementiel & Team-Building',
+    title: 'Interactive Experience & Team-Building Designer',
+    company: 'Live Events & Corporate Entertainment',
     duration: '2022 - 2024',
-    project: 'Le POWER Quiz, Les LEGO des Pharaons',
+    project: 'The POWER Quiz, Pharaohs’ LEGO',
     bullets: [
-      'Création et animation de dispositifs ludiques grandeur nature favorisant la cohésion d’équipe et l’engagement.',
-      'Équilibrage des mécaniques de scoring et des pouvoirs interactifs pour garantir convivialité et rejouabilité.',
+      'Created and hosted large-scale interactive entertainment experiences fostering team cohesion and player engagement.',
+      'Balanced scoring mechanics, real-time power cards, and cooperative challenges to maximize replayability and fun.',
     ],
   },
 ];
 
 export const education: Education[] = [
   {
-    degree: 'Master en Game Design',
+    degree: 'Master’s Degree in Game Design',
     school: 'ICAN (Institut de Création et Animation Numériques)',
-    duration: 'Diplômé',
-    detail: 'Spécialisation en Game Design, conception de systèmes de jeu, prototypage interactif et gestion de production de jeux vidéo.',
+    duration: 'Graduated',
+    detail: 'Specialization in game design, gameplay systems balancing, interactive prototyping, and game production management.',
   },
   {
-    degree: 'Formation Générale & Scientifique',
-    school: 'Enseignement Supérieur',
-    duration: 'Cursus initial',
-    detail: 'Bases solides en mathématiques, algorithmique, logique de programmation C++ / C# et modélisation.',
+    degree: 'Higher Education in Sciences & Computer Foundations',
+    school: 'Higher Education',
+    duration: 'Initial Curriculum',
+    detail: 'Solid foundation in mathematics, algorithmics, C++ / C# programming logic, and computational modeling.',
   },
 ];
