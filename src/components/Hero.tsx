@@ -22,11 +22,25 @@ export default function Hero({ onNavigate }: Props) {
   return (
     <section id="Home" className="section hero-section">
       <div className="container recent">
+        <div className="recent__meta mono">
+          <span>Portfolio — {new Date().getFullYear()}</span>
+          <span>{profile.location}</span>
+          <span className="hero__status">
+            <span className="hero__pulse" /> {profile.availability}
+          </span>
+        </div>
+
         <div className="recent__header reveal">
-          <h1 className="hero__title">
-            {profile.firstName} <span className="hero__line--outline">{profile.lastName}</span>
-          </h1>
-          <p className="hero__subtitle">{profile.title}</p>
+          <div className="recent__title-block">
+            <h1 className="hero__title">
+              {profile.firstName} <span className="hero__line--outline">{profile.lastName}</span>
+            </h1>
+            <p className="hero__subtitle">{profile.title}</p>
+            <a className="hero__scroll hero__scroll--inline mono" href="?Page=AboutMe" onClick={go('AboutMe')}>
+              <span className="hero__scroll-line" aria-hidden="true" />
+              Scroll down
+            </a>
+          </div>
           <a className="link-arrow mono" href="?Page=Projects" onClick={go('Projects')}>
             See all projects →
           </a>
@@ -47,14 +61,6 @@ export default function Hero({ onNavigate }: Props) {
       </div>
 
       <div className="hero hero--intro">
-        <div className="hero__meta mono">
-          <span>Portfolio — {new Date().getFullYear()}</span>
-          <span>{profile.location}</span>
-          <span className="hero__status">
-            <span className="hero__pulse" /> {profile.availability}
-          </span>
-        </div>
-
         <div className="hero__bottom">
           <div>
             <a className="button" href="?Page=AboutMe" onClick={go('AboutMe')}>
@@ -68,11 +74,6 @@ export default function Hero({ onNavigate }: Props) {
             levels and playful prototypes.
           </p>
         </div>
-
-        <a className="hero__scroll mono" href="?Page=AboutMe" onClick={go('AboutMe')}>
-          <span className="hero__scroll-line" aria-hidden="true" />
-          Scroll down
-        </a>
       </div>
 
     </section>

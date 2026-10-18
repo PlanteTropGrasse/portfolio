@@ -73,57 +73,13 @@ export const secondarySkills: string[] = [
 
 // The three project categories, in the order they appear on the home page.
 export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
+  { id: 'Professional', blurb: 'Large-scale team-building and immersive real-life activities' },
   { id: 'Student', blurb: 'Major school productions and graduation projects at ICAN' },
   { id: 'Personal', blurb: 'Prototypes, game jams and personal experiments' },
-  { id: 'Professional', blurb: 'Large-scale team-building and immersive real-life activities' },
 ];
 
 // Ordered from most recent to oldest — the home page previews the first entries of each category.
 export const projects: Project[] = [
-  {
-    title: 'Bastos',
-    duration: 'Video Game Project',
-    role: 'Game Designer',
-    tags: ['Game Design', 'Action', 'Systems', 'Shooter'],
-    category: 'Student',
-    description:
-      'Every bullet counts when each one has a special effect. A fast-paced shooter built around tactical resource management with distinctive ammunition behaviors.',
-    image: '/projects/bastos.jpg',
-    imageAlt: 'Bastos - Every bullet counts',
-  },
-  {
-    title: 'SYZYGY',
-    duration: 'Multiplayer Project',
-    role: 'Game Designer',
-    tags: ['Duel', 'Online Multiplayer', 'Strategy', 'Puzzle'],
-    category: 'Student',
-    description:
-      'A mystical online duel where two players battle to align celestial bodies and manipulate destiny using alignment mechanics and spatial control.',
-    image: '/projects/syzygy.webp',
-    imageAlt: 'SYZYGY - Mystical online duel',
-  },
-  {
-    title: 'Excroalibur',
-    duration: 'Turn-Based Project',
-    role: 'Lead Designer',
-    tags: ['Turn-Based', 'Tactics', 'Survival', 'Co-op'],
-    category: 'Student',
-    description:
-      'A turn-based twist on the bull game: players must protect a legendary sword from an overwhelming horde by passing it between characters at the right moment.',
-    image: '/projects/excroalibur.png',
-    imageAlt: 'Excroalibur - Protect the sword',
-  },
-  {
-    title: 'Sang%',
-    duration: 'Arena Shooter Project',
-    role: 'Game Designer',
-    tags: ['Arena', 'Shooter', 'Sacrifice', 'Systems'],
-    category: 'Student',
-    description:
-      'What if in an arena shooter, every shot cost a portion of your own health? An extreme risk-reward loop pushed to its limits.',
-    image: '/projects/sang-pourcent.png',
-    imageAlt: 'Sang% - Arena shooter game',
-  },
   {
     title: 'The POWER Quiz',
     duration: 'Interactive Experience',
@@ -151,18 +107,51 @@ export const projects: Project[] = [
     duration: 'Game Jam & Prototype',
     role: 'Game & Concept Designer',
     tags: ['Game Jam', 'AI Concept', 'Narrative Design'],
-    category: 'Personal',
+    category: 'Professional',
     description:
       'Can you build a game around artificial intelligence? A satirical interactive experience questioning our reliance on automated models.',
     image: '/projects/cirque-ia.jpg',
     imageAlt: 'The AI Circus - Jam prototype',
   },
   {
+    title: 'Bastos',
+    duration: 'Video Game Project',
+    role: 'Game Designer',
+    tags: ['Game Design', 'Action', 'Systems', 'Shooter'],
+    category: 'Student',
+    description:
+      'Every bullet counts when each one has a special effect. A fast-paced shooter built around tactical resource management with distinctive ammunition behaviors.',
+    image: '/projects/bastos.jpg',
+    imageAlt: 'Bastos - Every bullet counts',
+  },
+  {
+    title: 'SYZYGY',
+    duration: 'Multiplayer Project',
+    role: 'Game Designer',
+    tags: ['Duel', 'Online Multiplayer', 'Strategy', 'Puzzle'],
+    category: 'Student',
+    description:
+      'A mystical online duel where two players battle to align celestial bodies and manipulate destiny using alignment mechanics and spatial control.',
+    image: '/projects/syzygy.webp',
+    imageAlt: 'SYZYGY - Mystical online duel',
+  },
+  {
+    title: 'Sang%',
+    duration: 'Arena Shooter Project',
+    role: 'Game Designer',
+    tags: ['Arena', 'Shooter', 'Sacrifice', 'Systems'],
+    category: 'Student',
+    description:
+      'What if in an arena shooter, every shot cost a portion of your own health? An extreme risk-reward loop pushed to its limits.',
+    image: '/projects/sang-pourcent.png',
+    imageAlt: 'Sang% - Arena shooter game',
+  },
+  {
     title: 'Go Golem',
     duration: 'Territory War Prototype',
     role: 'Game & Level Designer',
     tags: ['Territory Control', 'Strategy', 'Multiplayer'],
-    category: 'Personal',
+    category: 'Student',
     description:
       'A territory-control strategy game where two players dynamically morph and reshape battlefield proportions to outmaneuver each other.',
     image: '/projects/gogolem.png',
@@ -173,11 +162,22 @@ export const projects: Project[] = [
     duration: 'Tactical Puzzle Game',
     role: 'Game & Level Designer',
     tags: ['Puzzle Game', 'Grimm Tales', 'Turn-Based'],
-    category: 'Personal',
+    category: 'Student',
     description:
       'A Hitman-GO style tactical puzzle game reimagined within the dark fantasy world of the Brothers Grimm fairy tales.',
     image: '/projects/hansel-gretel.png',
     imageAlt: 'Hansel & Gretel GO cover art',
+  },
+  {
+    title: 'Excroalibur',
+    duration: 'Turn-Based Project',
+    role: 'Lead Designer',
+    tags: ['Turn-Based', 'Tactics', 'Survival', 'Co-op'],
+    category: 'Personal',
+    description:
+      'A turn-based twist on the bull game: players must protect a legendary sword from an overwhelming horde by passing it between characters at the right moment.',
+    image: '/projects/excroalibur.png',
+    imageAlt: 'Excroalibur - Protect the sword',
   },
   {
     title: 'Ant Colony Simulation & 2048 in C++',
