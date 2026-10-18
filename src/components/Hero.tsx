@@ -6,9 +6,10 @@ import './Hero.css';
 
 type Props = {
   onNavigate: (id: SectionId) => void;
+  onSelectProject?: (project: Project) => void;
 };
 
-export default function Hero({ onNavigate }: Props) {
+export default function Hero({ onNavigate, onSelectProject }: Props) {
   const groups = projectCategories.map((category) => ({
     ...category,
     items: projects.filter((p) => p.category === category.id).slice(0, RECENT_PROJECTS_COUNT),
@@ -53,7 +54,12 @@ export default function Hero({ onNavigate }: Props) {
             </div>
             <div className="project-grid">
               {group.items.map((project, i) => (
-                <ProjectCard key={project.title} project={project} index={i} />
+                <ProjectCard
+                  key={project.title}
+                  project={project}
+                  index={i}
+                  onSelect={onSelectProject}
+                />
               ))}
             </div>
           </div>

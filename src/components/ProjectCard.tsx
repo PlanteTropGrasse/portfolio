@@ -4,20 +4,35 @@ import './ProjectCard.css';
 type Props = {
   project: Project;
   index: number;
+  onSelect?: (project: Project) => void;
 };
 
 const badgeModifier = (category: Project['category']) =>
   category.toLowerCase().replace(/\s+/g, '-');
 
-export default function ProjectCard({ project, index }: Props) {
+export default function ProjectCard({ project, index, onSelect }: Props) {
   const imageSrc = project.image.startsWith('/')
     ? `${import.meta.env.BASE_URL}${project.image.slice(1)}`
     : project.image;
 
+  const handleClick = () => {
+    onSelect?.(project);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onSelect?.(project);
+    }
+  };
+
   return (
     <article
-      className="project-card reveal"
+      className={`project-card reveal ${onSelect ? 'project-card--interactive' : ''}`}
       tabIndex={0}
+      role={onSelect ? 'button' : undefined}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
       style={{ transitionDelay: `${(index % 3) * 90}ms` }}
     >
       <div className="project-card__media">
@@ -32,6 +47,11 @@ export default function ProjectCard({ project, index }: Props) {
               </li>
             ))}
           </ul>
+          {onSelect && (
+            <span className="project-card__cta mono">
+              View project details →
+            </span>
+          )}
         </div>
       </div>
       <div className="project-card__body">

@@ -10,7 +10,11 @@ type Filter = 'All' | ProjectCategory;
 
 const filters: Filter[] = ['All', ...new Set(projects.map((p) => p.category))];
 
-export default function Projects() {
+type Props = {
+  onSelectProject?: (project: Project) => void;
+};
+
+export default function Projects({ onSelectProject }: Props) {
   const [filter, setFilter] = useState<Filter>('All');
   const visible = useMemo(
     () => (filter === 'All' ? projects : projects.filter((p) => p.category === filter)),
@@ -51,7 +55,12 @@ export default function Projects() {
 
         <div className="project-grid">
           {visible.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={i}
+              onSelect={onSelectProject}
+            />
           ))}
         </div>
       </div>

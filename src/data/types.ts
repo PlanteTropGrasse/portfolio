@@ -1,6 +1,7 @@
 export type ProjectCategory = 'Professional' | 'Student' | 'Personal';
 
 export type Project = {
+  id: string; // unique slug e.g. "bastos"
   title: string;
   duration: string; // e.g. "8 months (Oct 2024 - May 2025)"
   role: string; // e.g. "Intern / Freelance"
@@ -9,6 +10,10 @@ export type Project = {
   description: string;
   image: string; // path under public/, e.g. "/projects/tidebound.svg"
   imageAlt: string;
+  longDescription?: string[];
+  highlights?: string[];
+  linkUrl?: string;
+  linkLabel?: string;
 };
 
 export type Experience = {
