@@ -88,8 +88,8 @@ export const projects: Project[] = [
     category: 'Student',
     description:
       'Chaque balle compte quand elles ont toutes un effet spécial. Un jeu nerveux explorant une économie tactique de munitions aux propriétés distinctes.',
-    image: '/projects/tidebound.svg',
-    imageAlt: 'Bastos cover art',
+    image: '/projects/bastos.jpg',
+    imageAlt: 'Bastos - Chaque balle compte',
   },
   {
     title: 'SYZYGY',
@@ -99,8 +99,8 @@ export const projects: Project[] = [
     category: 'Student',
     description:
       'Un duel mystique en ligne où deux joueurs s’affrontent pour aligner des astres et manipuler le destin à travers des mécaniques d’alignement et de contrôle.',
-    image: '/projects/atlas-of-echoes.svg',
-    imageAlt: 'SYZYGY cover art',
+    image: '/projects/syzygy.webp',
+    imageAlt: 'SYZYGY - Duel mystique en ligne',
   },
   {
     title: 'Excroalibur',
@@ -110,8 +110,19 @@ export const projects: Project[] = [
     category: 'Student',
     description:
       'Une revisite du jeu du taureau en jeu tour par tour, dans laquelle le joueur doit protéger une épée d’une horde incessante en la passant d’un personnage à un autre.',
-    image: '/projects/hollow-signal.svg',
-    imageAlt: 'Excroalibur cover art',
+    image: '/projects/excroalibur.png',
+    imageAlt: 'Excroalibur - Protéger l’épée',
+  },
+  {
+    title: 'Sang%',
+    duration: 'Projet Jeu de Tir',
+    role: 'Game Designer',
+    tags: ['Arène', 'Tir', 'Sacrifice', 'Systèmes'],
+    category: 'Student',
+    description:
+      'Et si dans un jeu de tir en arène le joueur devait sacrifier sa propre vie pour tirer ? Une boucle risque-récompense poussée à l’extrême.',
+    image: '/projects/sang-pourcent.png',
+    imageAlt: 'Sang% - Jeu de tir en arène',
   },
   {
     title: 'Le POWER Quiz',
@@ -121,8 +132,8 @@ export const projects: Project[] = [
     category: 'Professional',
     description:
       'Le grand quiz indémodable revisité avec des pouvoirs spéciaux pour saboter ses adversaires et renverser les scores en temps réel.',
-    image: '/projects/pocket-siege.svg',
-    imageAlt: 'Le POWER quiz cover art',
+    image: '/projects/power-quiz.jpg',
+    imageAlt: 'Le POWER Quiz - Dispositif interactif',
   },
   {
     title: 'Les LEGO des Pharaons',
@@ -132,8 +143,8 @@ export const projects: Project[] = [
     category: 'Professional',
     description:
       'Une version à taille humaine du célèbre jeu de briques dans une thématique Égypte Antique, favorisant communication et créativité collective.',
-    image: '/projects/driftline.svg',
-    imageAlt: 'Les LEGO des pharaons cover art',
+    image: '/projects/lego-pharaons.jpg',
+    imageAlt: 'Les LEGO des Pharaons - Événementiel grandeur nature',
   },
   {
     title: 'Le Cirque de l’IA',
@@ -143,41 +154,52 @@ export const projects: Project[] = [
     category: 'Personal',
     description:
       'Faire un jeu autour de l’intelligence artificielle et de ses travers : une expérience satirique questionnant notre rapport aux modèles automatisés.',
-    image: '/projects/ember-rites.svg',
-    imageAlt: 'Le cirque de l’IA cover art',
+    image: '/projects/cirque-ia.jpg',
+    imageAlt: 'Le Cirque de l’IA - Concept & game jam',
   },
   {
-    title: 'GoGolem',
-    duration: 'Prototype Réflexion',
+    title: 'Go Golem',
+    duration: 'Guerre de Territoire',
     role: 'Game & Level Designer',
-    tags: ['Puzzle', 'Mécaniques', 'Prototypage'],
+    tags: ['Territoire', 'Stratégie', 'Multijoueur'],
     category: 'Personal',
     description:
-      'Jeu d’énigmes centré sur le guidage et la manipulation de golems aux capacités élémentaires complémentaires.',
-    image: '/projects/atlas-of-echoes.svg',
-    imageAlt: 'GoGolem cover art',
+      'Une guerre de territoire dans laquelle deux joueurs peuvent transformer et adapter les proportions du terrain.',
+    image: '/projects/gogolem.png',
+    imageAlt: 'Go Golem - Guerre de territoire',
+  },
+  {
+    title: 'Hansel & Gretel GO',
+    duration: 'Puzzle Game',
+    role: 'Game & Level Designer',
+    tags: ['Puzzle Game', 'Grimm', 'Tour par tour'],
+    category: 'Personal',
+    description:
+      'Le puzzle game tactique style Hitman-GO rencontre l’univers des contes des frères Grimm.',
+    image: '/projects/hansel-gretel.png',
+    imageAlt: 'Hansel & Gretel GO cover art',
   },
   {
     title: 'Simulation d’une Fourmi & 2048 en C++',
-    duration: 'Projet Technique',
+    duration: 'Projets C++ & Algorithmes',
     role: 'Développeur / Gameplay Programmer',
     tags: ['C++', 'Algorithmes', 'Simulation', 'Programmation'],
     category: 'Personal',
     description:
-      'Développements de simulations comportementales (colonie et déplacements d’agents) et recréation optimisée d’un moteur de jeu 2048 en C++.',
-    image: '/projects/hollow-signal.svg',
-    imageAlt: 'Simulation C++ cover art',
+      'Simulation du comportement d’agents autonomes (colonie de fourmis) et recréation optimisée d’un moteur de jeu 2048 en C++.',
+    image: '/projects/simulation-fourmi.jpg',
+    imageAlt: 'Simulation comportementale en C++',
   },
   {
-    title: 'Courts-métrages & Créations VFX',
-    duration: 'Projets Audiovisuels',
+    title: 'Courts-métrages Lego & GeoGebra',
+    duration: 'Créations Audiovisuelles & VFX',
     role: 'Réalisateur & Artiste VFX',
     tags: ['Audiovisuel', 'VFX', 'Animation Lego', 'GeoGebra'],
     category: 'Personal',
     description:
-      'Exploration cinématographique et d’effets visuels : réalisation de courts-métrages en stop-motion Lego et animations mathématiques avec GeoGebra.',
-    image: '/projects/driftline.svg',
-    imageAlt: 'Courts-métrages cover art',
+      'Courts-métrages d’animation en briques Lego et animations géométriques GeoGebra avec travail d’effets visuels et de montage.',
+    image: '/projects/court-metrage-lego.jpg',
+    imageAlt: 'Courts-métrages et animations',
   },
 ];
 
