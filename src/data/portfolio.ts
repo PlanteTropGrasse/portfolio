@@ -70,15 +70,78 @@ export const secondarySkills: string[] = [
   'English (Fluent)',
 ];
 
-// The three project categories, in the order they appear on the home page.
+// Project categories, in filter order.
 export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
   { id: 'Professional', blurb: 'Large-scale team-building and immersive real-life activities' },
   { id: 'Student', blurb: 'Major school productions and graduation projects at ICAN' },
   { id: 'Personal', blurb: 'Prototypes, game jams and personal experiments' },
 ];
 
-// Featured order — the home page previews the first entries of each category.
+export const homeProjects = { title: 'Latest projects' };
+
+// Latest projects first — the home page previews the first three entries.
 export const projects: Project[] = [
+  {
+    id: 'wonky-diver',
+    title: 'Wonky Diver',
+    duration: 'Coming soon',
+    role: 'Details coming soon',
+    tags: [],
+    category: 'Professional',
+    description: 'Project details coming soon.',
+    image: '/projects/placeholder.svg',
+    imageAlt: 'Wonky Diver — project preview coming soon',
+  },
+  {
+    id: 'wonky-race',
+    title: 'Wonky Race',
+    duration: 'Coming soon',
+    role: 'Details coming soon',
+    tags: [],
+    category: 'Professional',
+    description: 'Project details coming soon.',
+    image: '/projects/placeholder.svg',
+    imageAlt: 'Wonky Race — project preview coming soon',
+  },
+  {
+    id: 'my-lil-pot-utah',
+    title: "My lil' pot Utah",
+    duration: 'January 2026 · 1 week',
+    role: 'Game Designer & Game Artist',
+    tags: ['Unreal Engine 5', 'Game Jam', 'Arcade', 'Windows'],
+    category: 'Personal',
+    description: 'Help Utah, your virtual teapot assistant, fight rogue 3D assets with a bouncing ball. Control its rebounds, survive, and chase a high score.',
+    image: '/projects/utah-screenshot-1.png',
+    imageAlt: "My lil' pot Utah gameplay in a surreal 3D world",
+    medium: 'Downloadable Windows game developed in Unreal Engine 5.7.1',
+    context: 'Made in one week for Prince Gaëtan’s January 2026 game jam, where it won first place.',
+    longDescription: [
+      'January 1995: the assets in your modeling software have become corrupted and rebelled. Luckily, your trusted virtual assistant Utah is here to help. Eliminate as many geometric solids as possible and increase your score without getting killed.',
+      'Your weapon is a powerful bouncing ball capable of instantly defeating enemies. Control how it rebounds off enemies and the environment to keep the fight going.',
+      'The ball’s behavior and properties can change depending on which enemies it hits, so make the most of these interactions. Be careful not to lose it, or you will be left defenseless.',
+    ],
+    team: [
+      { name: 'Tomas Proust', role: 'Developer' },
+      { name: 'Adrian Proust', role: 'Game Designer & Game Artist', url: 'https://adrianproust.itch.io/' },
+      { name: 'Zakari Deladeriere', role: 'Level Designer', url: 'https://www.youtube.com/@zakgamelab' },
+    ],
+    credits: 'Music by steviasphere.',
+    media: [
+      { type: 'image', src: '/projects/utah-character.gif', alt: 'Utah, the animated virtual teapot assistant' },
+      { type: 'image', src: '/projects/utah-gameplay-1.gif', alt: "My lil' pot Utah animated gameplay demonstration 1" },
+      { type: 'image', src: '/projects/utah-gameplay-2.gif', alt: "My lil' pot Utah animated gameplay demonstration 2" },
+      { type: 'image', src: '/projects/utah-gameplay-3.gif', alt: "My lil' pot Utah animated gameplay demonstration 3" },
+      { type: 'image', src: '/projects/utah-artwork.png', alt: "My lil' pot Utah controls guide" },
+      { type: 'image', src: '/projects/utah-screenshot-1.png', alt: "My lil' pot Utah gameplay screenshot 1" },
+      { type: 'image', src: '/projects/utah-screenshot-2.png', alt: "My lil' pot Utah gameplay screenshot 2" },
+      { type: 'image', src: '/projects/utah-screenshot-3.png', alt: "My lil' pot Utah gameplay screenshot 3" },
+    ],
+    links: [
+      { label: 'Check the Itch.io page to download the game', url: 'https://zak-gamelab.itch.io/my-lil-pot-utah' },
+      { label: 'Watch the trailer', url: 'https://www.youtube.com/watch?v=EVIxLG9HnL8' },
+      { label: 'Music by steviasphere', url: 'https://steviasphere.bandcamp.com/' },
+    ],
+  },
   {
     id: 'power-quiz',
     media: [
@@ -628,7 +691,7 @@ export const projects: Project[] = [
 ];
 
 
-// Maximum number of projects previewed per category on the home page.
+// Maximum number of latest projects previewed on the home page.
 export const RECENT_PROJECTS_COUNT = 3;
 
 export const experiences: Experience[] = [

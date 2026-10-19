@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" fill="#171715"/>
+  <g fill="none" stroke="#34342e" stroke-width="2">
+    <path d="M0 200h1200M0 400h1200M0 600h1200M200 0v800M400 0v800M600 0v800M800 0v800M1000 0v800"/>
+    <circle cx="600" cy="350" r="110"/>
+    <rect x="525" y="275" width="150" height="150" rx="20" transform="rotate(15 600 350)" stroke="#ff5b1a"/>
+    <path d="M570 350h60m-30-30v60" stroke="#ff5b1a"/>
+  </g>
+  <text x="600" y="560" text-anchor="middle" fill="#aaa99d" font-family="monospace" font-size="22" letter-spacing="5">PREVIEW COMING SOON</text>
+</svg>

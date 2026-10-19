@@ -1,6 +1,6 @@
 import type { MouseEvent } from 'react';
 import type { Project, SectionId } from '../data/types';
-import { profile, projectCategories, projects, RECENT_PROJECTS_COUNT } from '../data/portfolio';
+import { homeProjects, profile, projects, RECENT_PROJECTS_COUNT } from '../data/portfolio';
 import ProjectCard from './ProjectCard';
 import './Hero.css';
 
@@ -10,10 +10,7 @@ type Props = {
 };
 
 export default function Hero({ onNavigate, onSelectProject }: Props) {
-  const groups = projectCategories.map((category) => ({
-    ...category,
-    items: projects.filter((p) => p.category === category.id).slice(0, RECENT_PROJECTS_COUNT),
-  }));
+  const latestProjects = projects.slice(0, RECENT_PROJECTS_COUNT);
 
   const go = (id: SectionId) => (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
@@ -45,24 +42,21 @@ export default function Hero({ onNavigate, onSelectProject }: Props) {
             See all projects →
           </a>
         </div>
-        {groups.map((group) => (
-          <div className="recent__group" key={group.id}>
-            <div className="recent__group-header reveal">
-              <h2 className="display-md">{group.id}</h2>
-              <p className="mono recent__blurb">{group.blurb}</p>
-            </div>
-            <div className="project-grid">
-              {group.items.map((project, i) => (
-                <ProjectCard
-                  key={project.title}
-                  project={project}
-                  index={i}
-                  onSelect={onSelectProject}
-                />
-              ))}
-            </div>
+        <div className="recent__group">
+          <div className="recent__group-header reveal">
+            <h2 className="display-md">{homeProjects.title}</h2>
           </div>
-        ))}
+          <div className="project-grid">
+            {latestProjects.map((project, i) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={i}
+                onSelect={onSelectProject}
+              />
+            ))}
+          </div>
+        </div>
       </div>
 
     </section>
