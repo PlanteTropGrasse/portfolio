@@ -1,5 +1,5 @@
 import type { MouseEvent } from 'react';
-import type { SectionId } from '../data/types';
+import type { Project, SectionId } from '../data/types';
 import { profile, projectCategories, projects, RECENT_PROJECTS_COUNT } from '../data/portfolio';
 import ProjectCard from './ProjectCard';
 import './Hero.css';

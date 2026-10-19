@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import type { ProjectCategory } from '../data/types';
+import type { Project, ProjectCategory } from '../data/types';
 import { projects } from '../data/portfolio';
 import { useReveal } from '../hooks/useReveal';
 import MarqueeBanner from './MarqueeBanner';
