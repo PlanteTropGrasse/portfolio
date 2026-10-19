@@ -9,10 +9,12 @@ type Props = {
 const badgeModifier = (category: Project['category']) =>
   category.toLowerCase().replace(/\s+/g, '-');
 
+const mediaSrc = (src: string) => src.startsWith('/')
+  ? `${import.meta.env.BASE_URL}${src.slice(1)}`
+  : src;
+
 export default function ProjectDetail({ project, onBack }: Props) {
-  const imageSrc = project.image.startsWith('/')
-    ? `${import.meta.env.BASE_URL}${project.image.slice(1)}`
-    : project.image;
+  const imageSrc = mediaSrc(project.image);
 
   return (
     <article className="project-detail">
@@ -53,6 +55,15 @@ export default function ProjectDetail({ project, onBack }: Props) {
         </div>
 
         <section className="project-detail__content">
+          {(project.medium || project.context) && (
+            <div className="project-detail__section">
+              <h2 className="display-sm project-detail__section-title">Project Context</h2>
+              <div className="project-detail__paragraphs">
+                {project.medium && <p className="project-detail__medium">{project.medium}</p>}
+                {project.context && <p>{project.context}</p>}
+              </div>
+            </div>
+          )}
           {project.longDescription && project.longDescription.length > 0 && (
             <div className="project-detail__section">
               <h2 className="display-sm project-detail__section-title">Overview & Concept</h2>
@@ -66,7 +77,7 @@ export default function ProjectDetail({ project, onBack }: Props) {
 
           {project.highlights && project.highlights.length > 0 && (
             <div className="project-detail__section">
-              <h2 className="display-sm project-detail__section-title">Key Contributions & Systems</h2>
+              <h2 className="display-sm project-detail__section-title">My Contributions</h2>
               <ul className="project-detail__highlights">
                 {project.highlights.map((h, i) => (
                   <li key={i}>
@@ -77,6 +88,60 @@ export default function ProjectDetail({ project, onBack }: Props) {
               </ul>
             </div>
           )}
+
+          {project.team && project.team.length > 0 && (
+            <div className="project-detail__section">
+              <h2 className="display-sm project-detail__section-title">Team & Credits</h2>
+              <ul className="project-detail__team">
+                {project.team.map((member) => (
+                  <li key={member.name}>
+                    <strong>{member.url
+                      ? <a href={member.url} target="_blank" rel="noopener noreferrer">{member.name}</a>
+                      : member.name}</strong>
+                    <span>{member.role}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {project.media && project.media.length > 0 && (
+            <div className="project-detail__section">
+              <h2 className="display-sm project-detail__section-title">Gallery & Video</h2>
+              <div className="project-detail__gallery">
+                {project.media.map((item) => (
+                  <figure key={item.src}>
+                    {item.type === 'video' ? (
+                      <video controls playsInline preload="none" poster={item.poster && mediaSrc(item.poster)} aria-label={item.alt}>
+                        <source src={mediaSrc(item.src)} type="video/mp4" />
+                        <a href={mediaSrc(item.src)}>Watch the video</a>
+                      </video>
+                    ) : (
+                      <a href={mediaSrc(item.src)} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size image: ${item.alt}`}>
+                        <img src={mediaSrc(item.src)} alt={item.alt} loading="lazy" decoding="async" />
+                      </a>
+                    )}
+                    {item.caption && <figcaption>{item.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {project.links && project.links.length > 0 && (
+            <div className="project-detail__section">
+              <h2 className="display-sm project-detail__section-title">Play & Resources</h2>
+              <div className="project-detail__actions">
+                {project.links.map((link) => (
+                  <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="button">
+                    {link.label} <span aria-hidden="true">↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {project.credits && <p className="mono project-detail__credits">{project.credits}</p>}
 
           {project.linkUrl && (
             <div className="project-detail__actions">

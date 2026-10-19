@@ -28,7 +28,7 @@ export const profile = {
 };
 
 export const contact = {
-  email: '3092hproust@gmail.com',
+  email: 'adrianproust@gmail.com',
   linkedin: { label: 'Adrian Proust', url: 'https://www.linkedin.com/in/adrian-proust' },
   artstation: { label: 'adrian_proust', url: 'https://adrian_proust.artstation.com/' },
   phone: '',
@@ -58,7 +58,6 @@ export const skills: Skill[] = [
 ];
 
 export const secondarySkills: string[] = [
-  'Unity / C#',
   'Unreal Engine',
   'C / C++',
   'Team-Building Design',
@@ -78,233 +77,551 @@ export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
   { id: 'Personal', blurb: 'Prototypes, game jams and personal experiments' },
 ];
 
-// Ordered from most recent to oldest — the home page previews the first entries of each category.
+// Featured order — the home page previews the first entries of each category.
 export const projects: Project[] = [
   {
     id: 'power-quiz',
-    title: 'The POWER Quiz',
-    duration: 'Interactive Experience',
-    role: 'Game & Systems Designer',
-    tags: ['Team-Building', 'Interactive Quiz', 'Party Game'],
-    category: 'Professional',
-    description:
-      'The timeless live quiz enhanced with special sabotage powers to disrupt opponents and overturn rankings in real time.',
-    image: '/projects/power-quiz.jpg',
-    imageAlt: 'The POWER Quiz - Interactive live event',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_04197545c04245adbd3c3b152c0e0aa4~mv2.jpeg",
+        "alt": "power-quiz — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_97f4d30bdd7e42abafeda2ea38060fb4~mv2.jpeg",
+        "alt": "power-quiz — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_8bb65dc44f674af7afcb3d0077cc1e92~mv2.jpeg",
+        "alt": "power-quiz — project image 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_a5802cf077b14814a60c4234ecc803d5~mv2.jpeg",
+        "alt": "power-quiz — project image 4"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_6c5f3948f33d4343885f59a01a18c8be~mv2.jpeg",
+        "alt": "power-quiz — project image 5"
+      }
+    ], title: 'The POWER Quiz', duration: '2024–2025',
+    role: 'Game Designer', category: 'Professional',
+    tags: ['Team-Building', 'Live Quiz', 'In Person & Online'],
+    description: 'The timeless hosted quiz, with powers that let teams sabotage their opponents and turn the game around.',
+    image: '/projects/power-quiz.jpg', imageAlt: 'The POWER Quiz live team-building event',
+    medium: 'In-person or online team-building experience',
+    context: 'A game format updated and improved during my contract at Les Coqs en Pâte.',
     longDescription: [
-      'The POWER Quiz reinvents the traditional live quiz into an interactive, high-stakes tournament format designed for corporate team-building events and large groups.',
-      'Beyond testing knowledge, players can collect, manage and trigger tactical powers (bonus multipliers, time freezes, question swaps and direct opponent sabotages), creating unexpected turnarounds and engaging social dynamics.',
+      'The timeless, ever-popular hosted quiz is reimagined with powers that add unexpected twists. A team might have to guess the host’s age to avoid a penalty, be forbidden from using their hands to operate the tablet, or redirect a power toward another team.',
+      'The game is designed to showcase the host’s acting and improvisation skills while encouraging interaction. Over 90 minutes, these elements can create a warm, familiar atmosphere and sometimes even contagious excitement in a corporate setting that usually feels very different.',
     ],
-    highlights: [
-      'Engineered the core power card balance to prevent runaway leaders while keeping gameplay fair and dynamic.',
-      'Designed real-time scoreboard interfaces and live game-host facilitation tools.',
-      'Deployed during multiple corporate events with over 100 concurrent participants.',
-    ],
+    credits: '© Les Coqs en Pâte',
+    links: [{ label: 'Watch the POWER Quiz trailer', url: 'https://www.youtube.com/watch?v=SgShqjr9Nfk' }],
   },
   {
     id: 'lego-pharaons',
-    title: 'Pharaohs’ LEGO',
-    duration: 'Large-Scale Experience',
-    role: 'Designer & Facilitator',
-    tags: ['Team-Building', 'Live Event', 'Immersion', 'Cooperation'],
-    category: 'Professional',
-    description:
-      'A life-sized version of the famous brick-building game in an Ancient Egypt setting, promoting communication and collaborative problem-solving.',
-    image: '/projects/lego-pharaons.jpg',
-    imageAlt: 'Pharaohs’ LEGO - Large-scale team building',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_98b57b61b17640c1b44ec3f8536cad8f~mv2.jpeg",
+        "alt": "lego-pharaons — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_c6c21832b1c146ecbf14d890f918a150~mv2.jpeg",
+        "alt": "lego-pharaons — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_d21888ff99204068b23837f411ddb80d~mv2.jpeg",
+        "alt": "lego-pharaons — project image 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_3f44bef78cf54bb495401d93a54f3e4f~mv2.jpeg",
+        "alt": "lego-pharaons — project image 4"
+      }
+    ], title: 'Pharaohs’ LEGO', duration: '2024–2025',
+    role: 'Game Designer', category: 'Professional',
+    tags: ['Team-Building', 'Giant LEGO', 'Quiz', 'Construction'],
+    description: 'An Ancient Egypt-themed competition combining a quiz with giant-brick construction challenges to choose the Pharaoh’s future architects.',
+    image: '/projects/lego-pharaons.jpg', imageAlt: 'Pharaohs’ LEGO team-building event',
+    medium: 'In-person team-building with tablets and giant LEGO bricks',
+    context: 'A redesign of an outdated game format for Les Coqs en Pâte.',
     longDescription: [
-      'An immersive grand-scale cooperative team-building experience where teams collaborate to construct monumental architectural structures using giant bricks.',
-      'Set within an Ancient Egyptian narrative, teams solve spatial puzzles, manage architectural constraints and exchange rare materials under time pressure.',
+      'Pharaohs’ LEGO is the latest addition to Les Coqs en Pâte’s family of giant-brick games. The previous version was too complicated logistically, which led us to imagine a new version built around a quiz format with construction challenges.',
+      'Set in Ancient Egypt, this new iteration offers a playful, offbeat experience. Players compete to become the Pharaoh’s future architects through challenges such as giant Jenga and speed building.',
     ],
-    highlights: [
-      'Designed physical puzzle blueprints and spatial challenges calibrated for teams of 5 to 10 players.',
-      'Created progressive difficulty scaling and architectural scoring criteria.',
-      'Facilitated workshops and live event sessions ensuring high engagement and clear communication flow.',
-    ],
+    credits: '© Les Coqs en Pâte',
   },
   {
     id: 'cirque-ia',
-    title: 'The AI Circus',
-    duration: 'Game Jam & Prototype',
-    role: 'Game & Concept Designer',
-    tags: ['Game Jam', 'AI Concept', 'Narrative Design'],
-    category: 'Professional',
-    description:
-      'Can you build a game around artificial intelligence? A satirical interactive experience questioning our reliance on automated models.',
-    image: '/projects/cirque-ia.jpg',
-    imageAlt: 'The AI Circus - Jam prototype',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_14cd20b7cc9c4a48b831bc89894a4faa~mv2.jpeg",
+        "alt": "cirque-ia — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_5b4211282dc74bce9f4534e4e865f97a~mv2.jpeg",
+        "alt": "cirque-ia — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_5b46d6adc4094a12b1e4a961c501524a~mv2.jpg",
+        "alt": "cirque-ia — project image 3"
+      }
+    ], title: 'The AI Circus', duration: '2024–2025',
+    role: 'Game Designer', category: 'Professional',
+    tags: ['Team-Building', 'Generative AI', 'ChatGPT', 'Midjourney'],
+    description: 'A ringmaster invites teams to invent tomorrow’s circus acts using AI, through accessible creative challenges for up to 150 participants.',
+    image: '/projects/cirque-ia.jpg', imageAlt: 'The AI Circus team-building experience',
+    medium: 'In-person team-building with a host and tablets connected to Midjourney and ChatGPT',
+    context: 'A new game format created for Les Coqs en Pâte.',
     longDescription: [
-      'Created as an interactive prototype exploring how artificial intelligence is presented and perceived in contemporary culture.',
-      'Players navigate a whimsical circus carnival where automated agents attempt to imitate human artistry, acrobacy and comedy, often with hilarious and thought-provoking outcomes.',
+      'This team-building experience takes on the challenge of making AI generation playful for groups of up to 150 participants, regardless of their experience level. A host dressed as a ringmaster needs new acts for his circus and is looking for people who can imagine the performances of tomorrow using AI.',
+      'The technology is reinterpreted through several game mechanics to move beyond a purely technical training session. Teams compete in a series of challenges.',
+      'In the “AI or not AI?” blind test, players must decide whether a cover song was actually performed by an artist.',
+      'In “GPT Slam,” teams have five minutes to write rhymes with ChatGPT on specific themes. They then take the microphone and rap their lyrics over a beat.',
+      'Other challenges ask teams to generate images in Midjourney from very precise—and sometimes overly demanding—briefs. The often questionable results are compared and judged by the host, who enjoys poking fun at them to make the participants laugh.',
+      'The game provides a gentle introduction to AI for people who are often far from being technology enthusiasts.',
     ],
-    highlights: [
-      'Explored satirical narrative framing and prompt-driven gameplay mechanics.',
-      'Designed reactive game loops highlighting the quirks, failures and surprises of generative automation.',
-    ],
+    credits: '© Les Coqs en Pâte',
   },
   {
     id: 'bastos',
-    title: 'Bastos',
-    duration: 'Video Game Project',
-    role: 'Game Designer',
-    tags: ['Game Design', 'Action', 'Systems', 'Shooter'],
-    category: 'Student',
-    description:
-      'Every bullet counts when each one has a special effect. A fast-paced shooter built around tactical resource management with distinctive ammunition behaviors.',
-    image: '/projects/bastos.jpg',
-    imageAlt: 'Bastos - Every bullet counts',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_14f2832191a8452dae3608016abf8f56~mv2.jpg",
+        "alt": "bastos — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_9b5870437ce747e4adbed92b09cea91a~mv2.jpg",
+        "alt": "bastos — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_78c1a8a73ca94574a46044dbdf6ac580~mv2.png",
+        "alt": "bastos — project image 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_cf73e7217f864f6da4e6d47aa5db94cd~mv2.gif",
+        "alt": "bastos — project image 4"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_d1ea2ff3cf804984b3c06c9b90d87648~mv2.jpg",
+        "alt": "bastos — project image 5"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_93a58c1178cf45bb97a12ef4567315b0~mv2.png",
+        "alt": "bastos — project image 6"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_520dfc1aeeff46de9a8b699636ff2b45~mv2.jpg",
+        "alt": "bastos — project image 7"
+      }
+    ], title: 'Bastos', duration: '2025 · 6 months',
+    role: 'Game Designer & VFX Artist', category: 'Student',
+    tags: ['Unreal Engine', 'Online', 'Arena FPS', 'Custom Ammunition'],
+    description: 'Every bullet counts when each has a special effect: customize the sequence of your magazine before entering the arena.',
+    image: '/projects/bastos.jpg', imageAlt: 'Bastos arena FPS gameplay',
+    medium: 'Online game developed in Unreal Engine',
+    context: 'A master’s graduation project developed over six months at ICAN.',
     longDescription: [
-      'Bastos is an intense arcade-shooter built around a core philosophy: ammunition is not just damage, it is utility. Every bullet fired triggers unique behavioral physics and environmental reactions.',
-      'Players are constantly pushed into fast-paced tactical decision-making, choosing between bullet conservation, elemental combos, and momentum management.',
+      'An arena FPS in which players can customize the order of the bullets in their magazine and their effects before playing. Sticky bullets, explosive bullets, dash bullets: different ammunition types complement one another in different combat situations, encouraging players to experiment with new magazines and improve on their previous performances.',
     ],
-    highlights: [
-      'Designed 10+ distinct bullet behaviors (bouncing, magnetizing, piercing, explosive chains).',
-      'Balanced weapon economies and enemy resistance tables across rigorous playtesting cycles.',
-      'Implemented fluid game feel feedback (screen shake, sound design cues, hit-stops).',
+    team: [
+      { name: 'Adrian PROUST', role: 'Game Designer & VFX Artist' },
+      { name: 'Vincent LUCAS', role: 'Game Designer & 3D Artist' },
+      { name: 'Zakari DELADERIERE', role: 'Game Designer, Level Designer & 2D Artist' },
+      { name: 'Quentin GAUTIER', role: 'Game Designer, Level Designer & 2D Artist' },
+      { name: 'Stanislas FRITSCH', role: 'Beautiful Programmer' },
     ],
+    links: [{ label: 'Read the Game Design Document (PDF)', url: 'https://319f71d5-0dc0-494d-b798-b7480961976b.filesusr.com/ugd/4ecbbb_db2ea4c43b194ee1a032c884af1279b2.pdf' }],
   },
   {
     id: 'syzygy',
-    title: 'SYZYGY',
-    duration: 'Multiplayer Project',
-    role: 'Game Designer',
-    tags: ['Duel', 'Online Multiplayer', 'Strategy', 'Puzzle'],
-    category: 'Student',
-    description:
-      'A mystical online duel where two players battle to align celestial bodies and manipulate destiny using alignment mechanics and spatial control.',
-    image: '/projects/syzygy.webp',
-    imageAlt: 'SYZYGY - Mystical online duel',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_a8878d734ca9473ea9d580709b47816d~mv2.gif",
+        "alt": "syzygy — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_7e8b3f41af484e5683f30a2180d84527~mv2.png",
+        "alt": "syzygy — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_d19bc513c7fc4a76b804d3c5e808edeb~mv2.gif",
+        "alt": "syzygy — project image 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_dc796c887ae24b3bb85f241f60657823~mv2.gif",
+        "alt": "syzygy — project image 4"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_67205041e35943eb939d4ab37dfe0cf6~mv2.gif",
+        "alt": "syzygy — project image 5"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_682dc77199f34cd79bfd04d5532fbabd~mv2.gif",
+        "alt": "syzygy — project image 6"
+      }
+    ], title: 'SYZYGY', duration: '2024',
+    role: 'Game & Card Designer', category: 'Student',
+    tags: ['Unreal Engine', 'Online Multiplayer', 'Card Game', 'Duel'],
+    description: 'A mystical online duel: align cards to form constellations and score points while sabotaging your opponent’s board.',
+    image: '/projects/syzygy.webp', imageAlt: 'SYZYGY mystical card duel',
+    medium: 'Online game developed in Unreal Engine',
+    context: 'A project created at ICAN around the theme of the card game.',
     longDescription: [
-      'SYZYGY is a 1v1 online strategy duel inspired by astronomical phenomena. Players control astrological houses and celestial orbits to create alignments across a shared board.',
-      'Every action shifts orbital gravitational centers, demanding foresight, spatial prediction and calculated risk-taking.',
+      'A reinterpretation of Knucklebones, the solo minigame from Cult of the Lamb, SYZYGY is an online multiplayer card game in which two players face one another in a mystical duel.',
+      'Methodically align your cards to create constellations and score points while sabotaging your opponent’s board. Compared with its inspiration, SYZYGY adds a range of simple, versatile mechanics for manipulating the board, developing strategies, and giving players greater control.',
     ],
-    highlights: [
-      'Designed the complete card & celestial alignment system (lunar phases, solar eclipses, gravitational tides).',
-      'Created synchronous multiplayer rules balanced for competitive readability and zero hidden randomness.',
-      'Produced extensive design documentation (GDD, flowcharts and card effect matrices).',
+    team: [
+      { name: 'Adrian PROUST', role: 'Game Design & Card Design' },
+      { name: 'Eden TAMENE', role: 'Game Art' },
+      { name: 'Laurène BROQUET', role: 'Game Programming' },
+      { name: 'Fanny ALLEN', role: 'Lead Game Design' },
+      { name: 'Zakari DELADERIERE', role: 'Game Design' },
+      { name: 'Louison GILLES', role: 'Game Design' },
+    ],
+    links: [
+      { label: 'Play SYZYGY on itch.io', url: 'https://filoupompom.itch.io/syzygy' },
+      { label: 'Read the Game Design Document (PDF)', url: 'https://319f71d5-0dc0-494d-b798-b7480961976b.filesusr.com/ugd/4ecbbb_5481d5a6b36349debd811883eaf81b29.pdf' },
     ],
   },
   {
     id: 'sang-pourcent',
-    title: 'Sang%',
-    duration: 'Arena Shooter Project',
-    role: 'Game Designer',
-    tags: ['Arena', 'Shooter', 'Sacrifice', 'Systems'],
-    category: 'Student',
-    description:
-      'What if in an arena shooter, every shot cost a portion of your own health? An extreme risk-reward loop pushed to its limits.',
-    image: '/projects/sang-pourcent.png',
-    imageAlt: 'Sang% - Arena shooter game',
+    media: [
+      {
+        "type": "video",
+        "src": "https://video.wixstatic.com/video/4ecbbb_67845c170b5641398ec7be45913f3be1/720p/mp4/file.mp4",
+        "alt": "sang-pourcent gameplay video",
+        "poster": "https://static.wixstatic.com/media/4ecbbb_67845c170b5641398ec7be45913f3be1f000.jpg"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_45077de147604d948c06dff7edab681c~mv2.gif",
+        "alt": "Dynamic diagram simulating the resources in the gameplay loop. Created with Machinations.io.",
+        "caption": "Dynamic diagram simulating the resources in the gameplay loop. Created with Machinations.io."
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_8977e17a487645c3ba394038c4bfda83~mv2.png",
+        "alt": "sang-pourcent — project image 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_ee6319ef45954b7caa61b06c51d6a23a~mv2.png",
+        "alt": "sang-pourcent — project image 4"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_0a808057b05e4790854923fbb4ea7699~mv2.png",
+        "alt": "sang-pourcent — project image 5"
+      }
+    ], title: 'Sang%', duration: '2024',
+    role: 'Lead Game Designer', category: 'Student',
+    tags: ['Unreal Engine 5', 'Arena Shooter', 'Health as Ammunition'],
+    description: 'An arena shooter where every shot costs health. Recover blood from defeated enemies and exceed 100% health to unleash a temporary frenzy.',
+    image: '/projects/sang-pourcent.png', imageAlt: 'Sang% arena shooter',
+    medium: 'Game developed in Unreal Engine 5',
+    context: 'A fast-paced arena shooter created as an ICAN student project in 2024.',
     longDescription: [
-      'Sang% (Blood%) is a hardcore top-down arena shooter built around a radical mechanic: your health bar is your ammunition pool.',
-      'Firing high-powered weapons directly depletes the player’s vitality, while defeating enemies and executing close-range maneuvers refills blood reserves, rewarding bold and aggressive play.',
+      'Sang% is a tense shooter built around one essential loop: the character uses their own health as ammunition, and killing enemies allows them to recover it.',
+      'Depending on the weapon, players sacrifice different amounts of health to try to eliminate their attackers. They must approach opponents with some caution: every wasted shot counts and brings them closer to death.',
+      'Defeated enemies drop blood bags that the character can collect to recover health. Exceeding 100% of the health bar rewards the player with a temporary frenzy in which shooting no longer costs health. This state reverses the relationship between player and enemies, offering an opportunity to unleash a hail of bullets capable of destroying any opponent.',
+      'The gameplay loop creates a roller-coaster experience, constantly moving between imminent defeat—when the player has just one health point and can no longer shoot—and the euphoria of an unstoppable rampage.',
     ],
-    highlights: [
-      'Engineered an adrenaline-fueled risk-reward feedback loop balanced on razor-thin margins.',
-      'Designed dynamic enemy waves designed to force movement and prevent passive corner camping.',
+    team: [
+      { name: 'Adrian PROUST', role: 'Lead Game Designer' },
+      { name: 'Mathis NEGNY', role: 'Game Designer' },
+      { name: 'Vincent LUCAS', role: 'Game Designer' },
+      { name: 'Thomas VO', role: 'Game Designer' },
+      { name: 'Guillaume LEBRETON', role: 'Game Artist' },
+      { name: 'Alexandre MEZANGES', role: 'Level Designer' },
+      { name: 'Ewen CELIBERT', role: 'Game Programmer' },
+      { name: 'Florian VISEUX', role: 'Game Programmer' },
     ],
+    links: [{ label: 'Read the Game Design Document (PDF)', url: 'https://319f71d5-0dc0-494d-b798-b7480961976b.filesusr.com/ugd/4ecbbb_a01df21a81fa4316bed2f65d0c0d0c83.pdf' }],
   },
   {
     id: 'gogolem',
-    title: 'Go Golem',
-    duration: 'Territory War Prototype',
-    role: 'Game & Level Designer',
-    tags: ['Territory Control', 'Strategy', 'Multiplayer'],
-    category: 'Student',
-    description:
-      'A territory-control strategy game where two players dynamically morph and reshape battlefield proportions to outmaneuver each other.',
-    image: '/projects/gogolem.png',
-    imageAlt: 'Go Golem - Territory war',
+    media: [
+      {
+        "type": "video",
+        "src": "https://video.wixstatic.com/video/4ecbbb_2c876ca3893a448f8b8085bfd0abb24a/720p/mp4/file.mp4",
+        "alt": "gogolem gameplay video",
+        "poster": "https://static.wixstatic.com/media/4ecbbb_2c876ca3893a448f8b8085bfd0abb24af000.jpg",
+        "caption": "Go Golem gameplay"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_3449aa200ce346cdb39534dd7ff933ee~mv2.png",
+        "alt": "Gameplay screenshot",
+        "caption": "Gameplay screenshot"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_0b7044c68cbc47e8a72cdd7c33a04877~mv2.jpg",
+        "alt": "Go Golem cover art 1",
+        "caption": "Go Golem cover art 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_c219229535aa4c5788848cf17600da1c~mv2.png",
+        "alt": "Go Golem cover art 2",
+        "caption": "Go Golem cover art 2"
+      }
+    ], title: 'Go Golem', duration: '2023',
+    role: 'Game Designer', category: 'Student',
+    tags: ['Unreal Engine 5', 'Territory Control', 'Tactics', 'Two Players'],
+    description: 'A territory-control duel where players reshape their golems with blocks to paint more ground and defend their territory.',
+    image: '/projects/gogolem.png', imageAlt: 'Go Golem tactical territory game',
+    medium: 'Game developed in Unreal Engine 5',
+    context: 'A tactical game created as an ICAN student project on the theme of “the tactical game.”',
     longDescription: [
-      'Go Golem is a tactical board-control game pitting elemental golems against each other in an evolving landscape.',
-      'Rather than simply moving units, players terraform the battlefield: raising walls, sinking waterways, and shifting tile lines to disrupt enemy pathfinding.',
+      'Two players duel to conquer as much territory as possible within a time limit. They slide golems across the board, painting the paths they travel in their own color.',
+      'The game revolves around a key mechanic: golems’ bodies can be enlarged with blocks. Depending on their shape, they are better or worse at claiming ground or protecting areas.',
+      'Alongside this shared feature, each golem has special abilities—destroying other golems like a battering ram, moving twice, or placing obstacles—which interact with transformation in different ways.',
     ],
-    highlights: [
-      'Pioneered dynamic grid-morphing mechanics that continuously redefine player positioning.',
-      'Designed elemental interactions (Earth, Water, Stone) and asymmetric faction abilities.',
+    team: [
+      { name: 'Adrian PROUST', role: 'Game Design' },
+      { name: 'Guillaume LESAGE', role: 'Game Programming' },
+      { name: 'Baptiste GARNIER', role: 'Game Art' },
+      { name: 'Soline MAILLARD', role: 'Game Design' },
+    ],
+    links: [
+      { label: 'Play Go Golem on itch.io', url: 'https://solinemaillard.itch.io/gogolem' },
+      { label: 'Download the Game Design Document (PowerPoint)', url: 'https://319f71d5-0dc0-494d-b798-b7480961976b.filesusr.com/ugd/4ecbbb_92ef37b5e5d04fd5adcb33dbc1bc5ab7.pptx?dn=GDD_GoGolem.pptx' },
     ],
   },
   {
     id: 'hansel-gretel',
-    title: 'Hansel & Gretel GO',
-    duration: 'Tactical Puzzle Game',
-    role: 'Game & Level Designer',
-    tags: ['Puzzle Game', 'Grimm Tales', 'Turn-Based'],
-    category: 'Student',
-    description:
-      'A Hitman-GO style tactical puzzle game reimagined within the dark fantasy world of the Brothers Grimm fairy tales.',
-    image: '/projects/hansel-gretel.png',
-    imageAlt: 'Hansel & Gretel GO cover art',
-    longDescription: [
-      'Inspired by the tactical puzzle clarity of games like Hitman GO and Lara Croft GO, Hansel & Gretel GO turns the classic fairy tale into a suspenseful turn-based stealth puzzle.',
-      'Players coordinate both siblings across interconnected node grids, using breadcrumbs, lures and distractions to evade gingerbread traps and dark forest creatures.',
-    ],
-    highlights: [
-      'Authored 15+ handcrafted puzzle levels with smooth difficulty curves and mechanical discovery.',
-      'Designed dual-character cooperative turn pacing and enemy patrol deterministic logic.',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_6e0d8b2838224f9fbe7e2aa4a9add535~mv2.png",
+        "alt": "hansel-gretel — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_ee89311a0daa4a1a9938e470361c0db6~mv2.png",
+        "alt": "hansel-gretel — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_0d8bb2a674e0407e9c19f6fcf60c60f9~mv2.png",
+        "alt": "hansel-gretel — project image 3"
+      }
+    ], title: 'Hansel & Gretel GO', duration: '2023–2024',
+    role: 'Game & Sound Designer', category: 'Student',
+    tags: ['Unreal Engine 5', 'Puzzle', 'Strategy', 'Fairy Tale'],
+    description: 'An adaptation of Hansel and Gretel as a strategy game inspired by the puzzle game Hitman GO.',
+    image: '/projects/hansel-gretel.png', imageAlt: 'Hansel & Gretel GO gameplay',
+    medium: 'Game developed in Unreal Engine 5',
+    context: 'An adaptation of the fairy tale into a strategy game based on the puzzle game Hitman GO, created as an ICAN student project in 2023–2024.',
+    team: [
+      { name: 'Adrian PROUST', role: 'Game & Sound Designer' },
+      { name: 'Emma LAMOUCHE', role: 'Game Designer & Game Director' },
+      { name: 'Fanny ALLEN', role: 'Game Designer & Game Programmer' },
+      { name: 'Eden TAMENE', role: '2D & 3D Game Artist' },
     ],
   },
   {
     id: 'excroalibur',
-    title: 'Excroalibur',
-    duration: 'Turn-Based Project',
-    role: 'Lead Designer',
-    tags: ['Turn-Based', 'Tactics', 'Survival', 'Co-op'],
-    category: 'Personal',
-    description:
-      'A turn-based twist on the bull game: players must protect a legendary sword from an overwhelming horde by passing it between characters at the right moment.',
-    image: '/projects/excroalibur.png',
-    imageAlt: 'Excroalibur - Protect the sword',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_53cc385d3929484981b63c918f222118~mv2.png",
+        "alt": "excroalibur — project image 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_991eb5054e6e48a2bcd9eca23de8689b~mv2.png",
+        "alt": "excroalibur — project image 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_a58cfeb34ab047eeb0984d99592a6d0d~mv2.png",
+        "alt": "excroalibur — project image 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_ee86e082a5924cb8a767d09616e365c0~mv2.png",
+        "alt": "excroalibur — project image 4"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_cf8e6154b8ee4062b2e685771fa40249~mv2.png",
+        "alt": "excroalibur — project image 5"
+      }
+    ], title: 'Excroalibur', duration: '2025–ongoing',
+    role: 'Game Designer', category: 'Personal',
+    tags: ['Unity', 'Turn-Based Strategy', 'Progression', 'Roguelike'],
+    description: 'Three frogs steal a legendary sword. Pass it between them to build its power, then throw it at the knights trying to reclaim it.',
+    image: '/projects/excroalibur.png', imageAlt: 'Excroalibur turn-based frog squad',
+    medium: 'Game developed in Unity',
+    context: 'I joined the project midway through production, after a prototype had been created, to design a progression system and add a roguelike dimension with upgrades.',
     longDescription: [
-      'Excroalibur reimagines the classic schoolyard keep-away / bull game as a turn-based tactical survival experience.',
-      'A party of eccentric warriors must defend Excroalibur — a heavy, cursed sword that grants immense power to its wielder but steadily draws every monster on the map toward them.',
+      'Excroalibur is a turn-based strategy game in which the player controls a trio of frogs who have stolen a legendary sword. Waves of knights pursue them to recover it.',
+      'To defend themselves, the frogs can increase the sword’s power by passing it between one another, then throw it at enemies to eliminate them.',
+      'Players must also carefully organize their squad’s positioning to manage an increasingly large crowd of enemies.',
     ],
-    highlights: [
-      'Developed the "Sword Hot-Potato" mechanic where throwing or passing the weapon resets enemy aggro and repositions danger zones.',
-      'Balanced asymmetric character archetypes optimized for passing, absorbing blows, or clearing swarms.',
+    team: [
+      { name: 'Adrian PROUST', role: 'Game Designer' },
+      { name: 'Vincent LUCAS', role: 'Producer, Art Direction & Game Designer' },
+      { name: 'Stanislas FRITSCH', role: 'Lead Game Programmer' },
+      { name: 'Quentin GAUTIER', role: 'Game Designer & Level Designer' },
+      { name: 'Tristan CHARDAT', role: 'Game Designer' },
+      { name: 'André LAUZIER', role: 'Game Programmer' },
+      { name: 'Titouan DREZET', role: 'Sound Designer, Composer & Game Programmer' },
+      { name: 'Hugo LOTZ', role: 'Game Artist' },
+      { name: 'Laurélyne DENAVAUT', role: 'Game Artist' },
+      { name: 'Julien CARPENTIER', role: 'UX Designer, Game Designer & Social Media Manager' },
+      { name: 'Nathan WYNANDS', role: 'Game Designer' },
     ],
+    links: [{ label: 'View Excroalibur on itch.io', url: 'https://asakim-the-mist-warden.itch.io/excroalibur' }],
+  },
+  {
+    id: 'neutriscore',
+    media: [
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_4062c35576ca49a89a76099df3c88695~mv2.png",
+        "alt": "Title screen",
+        "caption": "Title screen"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_1565df45e0604399bcf97ea9f6005f4e~mv2.jpg",
+        "alt": "Tutorial 1",
+        "caption": "Tutorial 1"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_d68bf7872c7b4e3990d2d74ae2ddbc58~mv2.jpg",
+        "alt": "Tutorial 2",
+        "caption": "Tutorial 2"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_b38d231ee2514e34876b703302bf4646~mv2.jpg",
+        "alt": "Tutorial 3",
+        "caption": "Tutorial 3"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_2222071a9f2a439fa09949bd25c53f01~mv2.jpg",
+        "alt": "Tutorial 4",
+        "caption": "Tutorial 4"
+      },
+      {
+        "type": "image",
+        "src": "https://static.wixstatic.com/media/4ecbbb_8354c56d0f15441898ed8f59c1429cef~mv2.jpg",
+        "alt": "End of a game",
+        "caption": "End of a game"
+      }
+    ], title: 'Neutriscore', duration: '2023 · 48 hours',
+    role: 'Game Designer', category: 'Personal',
+    tags: ['Unity', 'Scientific Game Jam', 'Science Communication'],
+    description: 'A game made in 48 hours to turn research into the diffuse supernova neutrino background into a playful experience.',
+    image: '/projects/neutriscore.png', imageAlt: 'Neutriscore title screen',
+    medium: 'Game developed in Unity',
+    context: 'Created in 48 hours during the Spring 2023 Scientific Game Jam, with the goal of illustrating Antoine BEAUCHÊNE’s thesis, “The Diffuse Supernova Neutrino Background,” through play.',
+    team: [
+      { name: 'Antoine BEAUCHÊNE', role: 'Scientist' },
+      { name: 'Alexandre GUIMBEAUD', role: 'Programmer' },
+      { name: 'Romain CHAMBERT', role: 'Programmer' },
+      { name: 'Marguerite LEANG', role: 'Game Artist' },
+      { name: 'Solenne MARTY', role: 'Game Artist', url: 'https://www.linkedin.com/in/solenne-marty/' },
+      { name: 'Benjamin QUELLEC', role: 'Sound Designer', url: 'https://www.benjaminquellec.com/' },
+      { name: 'Adrian PROUST', role: 'Game Designer', url: 'https://www.linkedin.com/in/adrian-proust-417720159/' },
+    ],
+    links: [{ label: 'Play Neutriscore on itch.io', url: 'https://minerium.itch.io/neutriscore' }],
   },
   {
     id: 'simulation-cplusplus',
-    title: 'Ant Colony Simulation & 2048 in C++',
-    duration: 'C++ & Algorithm Projects',
-    role: 'Developer / Gameplay Programmer',
-    tags: ['C++', 'Algorithms', 'Simulation', 'Programming'],
-    category: 'Personal',
-    description:
-      'Autonomous agent behavioral simulation (ant colony dynamics) and an optimized game engine recreation of 2048 in modern C++.',
-    image: '/projects/simulation-fourmi.jpg',
-    imageAlt: 'Behavioral simulation in C++',
-    longDescription: [
-      'A collection of technical projects focused on algorithmic efficiency, systems architecture and agent simulation.',
-      'Includes an autonomous ant foraging simulation using pheromone diffusion and scent trail algorithms, alongside a complete console & graphical recreation of the 2048 puzzle engine in C++.',
-    ],
-    highlights: [
-      'Implemented grid-based pheromone decay and reinforcement algorithms in pure C++.',
-      'Wrote performant data structures minimizing allocations and memory footprint.',
-    ],
+    media: [
+      {
+        "type": "video",
+        "src": "https://video.wixstatic.com/video/4ecbbb_ab7940adcc514f8099f64403b5d35156/720p/mp4/file.mp4",
+        "alt": "simulation-cplusplus original film or demonstration"
+      }
+    ], title: 'Ant Colony Algorithms', duration: '2016',
+    role: 'Programmer', category: 'Personal',
+    tags: ['C++', 'Artificial Intelligence', 'Simulation', 'Pair Project'],
+    description: 'A virtual ant ecosystem: autonomous ants collect sugar, return it to their nest, and communicate through pheromones.',
+    image: '/projects/simulation-fourmi.jpg', imageAlt: 'Ant colony simulation in C++',
+    medium: 'C++ programming project',
+    context: 'An end-of-year project completed in a pair. Our goal was to create the AI for an ant and an entire colony, in the spirit of John Horton Conway’s Game of Life.',
+    longDescription: ['We wanted to build a virtual ecosystem in which ants could collect sugar, bring it back to the nest, and communicate with other ants using pheromones.'],
+  },
+  {
+    id: '2048',
+    media: [
+      {
+        "type": "video",
+        "src": "https://video.wixstatic.com/video/4ecbbb_68bf317553b648b7a8aedd6c831e19a4/720p/mp4/file.mp4",
+        "alt": "2048 original film or demonstration"
+      }
+    ], title: '2048 in C++', duration: '2015',
+    role: 'Programmer', category: 'Personal',
+    tags: ['C++', 'ASCII', 'Console', 'Code::Blocks'],
+    description: 'A console implementation of 2048, with an ASCII board and tile movement and merging logic.',
+    image: '/projects/2048.jpg', imageAlt: '2048 C++ console project',
+    medium: 'C++ programming project',
+    context: 'A weekly undergraduate assignment to code 2048 in Code::Blocks.',
+    highlights: ['Programmed the board display directly in the console using ASCII.', 'Handled the movement of tile values and their increments when merging.'],
   },
   {
     id: 'short-films-vfx',
-    title: 'Lego & GeoGebra Short Films',
-    duration: 'Audiovisual & VFX Projects',
-    role: 'Director & VFX Artist',
-    tags: ['Audiovisual', 'VFX', 'Lego Animation', 'GeoGebra'],
-    category: 'Personal',
-    description:
-      'Stop-motion brick animation short films and mathematical GeoGebra animations featuring custom visual effects and video editing.',
-    image: '/projects/court-metrage-lego.jpg',
-    imageAlt: 'Short films and animations',
-    longDescription: [
-      'Creative exploration in stop-motion brick animation and mathematical motion graphics.',
-      'Combines practical frame-by-frame puppet work with digital post-production (lighting, compositing, visual effects and audio synchronization).',
-    ],
-    highlights: [
-      'Complete production cycle: storyboarding, physical set construction, shooting, sound editing and color grading.',
-      'Experimental mathematical curve animation with GeoGebra used as procedural visual assets.',
-    ],
+    media: [
+      {
+        "type": "video",
+        "src": "https://video.wixstatic.com/video/4ecbbb_e74af3f4fcba401093e488e2b76937ef/720p/mp4/file.mp4",
+        "alt": "short-films-vfx original film or demonstration"
+      }
+    ], title: 'A Game of Bricks in Stop Motion', duration: '2014',
+    role: 'Filmmaker', category: 'Personal', tags: ['Short Film', 'Stop Motion', 'LEGO'],
+    description: 'A LEGO stop-motion short film created for the final visual arts portfolio for the French baccalaureate.',
+    image: '/projects/court-metrage-lego.jpg', imageAlt: 'LEGO stop-motion short film',
+    medium: 'Stop-motion film',
+    context: 'A short film made for the final portfolio of the visual arts option for the French baccalaureate.',
+  },
+  {
+    id: 'geogebra-short-film',
+    media: [
+      {
+        "type": "video",
+        "src": "https://video.wixstatic.com/video/4ecbbb_2bf6264721144cc988f5ed3fe8c5bb18/720p/mp4/file.mp4",
+        "alt": "geogebra-short-film original film or demonstration"
+      }
+    ], title: 'GeoGebra Short Film', duration: '2014',
+    role: 'Filmmaker', category: 'Personal', tags: ['Short Film', 'GeoGebra', 'Visual Arts'],
+    description: 'A short film created with GeoGebra for a final visual arts portfolio.',
+    image: '/projects/court-metrage-geogebra.png', imageAlt: 'GeoGebra animated short film',
+    medium: 'GeoGebra software',
+    context: 'A short film made for the final portfolio of the visual arts option.',
   },
 ];
+
 
 // Maximum number of projects previewed per category on the home page.
 export const RECENT_PROJECTS_COUNT = 3;

@@ -12,6 +12,12 @@ export type Project = {
   imageAlt: string;
   longDescription?: string[];
   highlights?: string[];
+  medium?: string;
+  context?: string;
+  team?: { name: string; role: string; url?: string }[];
+  credits?: string;
+  links?: { label: string; url: string }[];
+  media?: { type: 'image' | 'video'; src: string; alt: string; caption?: string; poster?: string }[];
   linkUrl?: string;
   linkLabel?: string;
 };

@@ -25,7 +25,6 @@ export default function Hero({ onNavigate, onSelectProject }: Props) {
       <div className="container recent">
         <div className="recent__meta mono">
           <span>Portfolio — {new Date().getFullYear()}</span>
-          <span>{profile.location}</span>
           <span className="hero__status">
             <span className="hero__pulse" /> {profile.availability}
           </span>
@@ -64,22 +63,6 @@ export default function Hero({ onNavigate, onSelectProject }: Props) {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="hero hero--intro">
-        <div className="hero__bottom">
-          <div>
-            <a className="button" href="?Page=AboutMe" onClick={go('AboutMe')}>
-              About me <span aria-hidden="true">→</span>
-            </a>
-          </div>
-          <p className="hero__tagline">
-            Junior / freelance game designer at <strong>{profile.currentStudio}</strong>, with{' '}
-            <strong>{profile.yearsOfExperience} years</strong> of experience and{' '}
-            <strong>{profile.shippedTitles} shipped titles</strong>. I build readable systems, sharp
-            levels and playful prototypes.
-          </p>
-        </div>
       </div>
 
     </section>

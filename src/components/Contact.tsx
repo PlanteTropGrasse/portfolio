@@ -5,7 +5,6 @@ export default function Contact() {
   const channels = [
     { label: 'Email', value: contact.email, href: `mailto:${contact.email}` },
     { label: 'LinkedIn', value: contact.linkedin.label, href: contact.linkedin.url },
-    { label: 'Phone', value: contact.phone, href: `tel:${contact.phone.replace(/\s+/g, '')}` },
   ];
 
   return (
