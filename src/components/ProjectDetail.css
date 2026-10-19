@@ -151,6 +151,15 @@
   gap: 1rem;
 }
 
+.project-detail__slides {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-raised);
+}
+
 .project-detail__actions .button {
   white-space: normal;
 }

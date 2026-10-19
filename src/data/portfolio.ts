@@ -414,6 +414,11 @@ export const projects: Project[] = [
   },
   {
     id: 'hansel-gretel',
+    presentation: {
+      title: 'Hansel & Gretel GO — Design Presentation',
+      embedUrl: 'https://docs.google.com/presentation/d/e/2PACX-1vTDFtmsUhQYVZ_iQ0e0dHT1S4KM7opj0bKkrCaaxAhlB2bD3Eki_tGWyci4Zex-s3nfl00kZPlpZzu_/embed?start=false&loop=true&delayms=30000',
+      url: 'https://docs.google.com/presentation/d/e/2PACX-1vTDFtmsUhQYVZ_iQ0e0dHT1S4KM7opj0bKkrCaaxAhlB2bD3Eki_tGWyci4Zex-s3nfl00kZPlpZzu_/pub?start=false&loop=true&delayms=30000',
+    },
     media: [
       {
         "type": "image",

@@ -13,6 +13,7 @@ export type Project = {
   longDescription?: string[];
   highlights?: string[];
   medium?: string;
+  presentation?: { title: string; embedUrl: string; url: string };
   context?: string;
   team?: { name: string; role: string; url?: string }[];
   credits?: string;

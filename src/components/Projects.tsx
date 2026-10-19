@@ -1,23 +1,21 @@
 import { useMemo, useState } from 'react';
 import type { Project, ProjectCategory } from '../data/types';
-import { projects } from '../data/portfolio';
+import { projectCategories, projects } from '../data/portfolio';
 import { useReveal } from '../hooks/useReveal';
 import MarqueeBanner from './MarqueeBanner';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
-type Filter = 'All' | ProjectCategory;
-
-const filters: Filter[] = ['All', ...new Set(projects.map((p) => p.category))];
+const filters = projectCategories.map((category) => category.id);
 
 type Props = {
   onSelectProject?: (project: Project) => void;
 };
 
 export default function Projects({ onSelectProject }: Props) {
-  const [filter, setFilter] = useState<Filter>('All');
+  const [filter, setFilter] = useState<ProjectCategory>(filters[0]);
   const visible = useMemo(
-    () => (filter === 'All' ? projects : projects.filter((p) => p.category === filter)),
+    () => projects.filter((p) => p.category === filter),
     [filter],
   );
   useReveal([filter]);
@@ -47,7 +45,7 @@ export default function Projects({ onSelectProject }: Props) {
             >
               {f}
               <span className="mono filter__count">
-                {f === 'All' ? projects.length : projects.filter((p) => p.category === f).length}
+                {projects.filter((p) => p.category === f).length}
               </span>
             </button>
           ))}
