@@ -1,17 +1,49 @@
 .presentation-viewer {
   position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-raised);
+}
+
+.presentation-viewer__preview,
+.presentation-viewer .project-detail__slides {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+}
+
+.presentation-viewer__preview {
+  z-index: 1;
+  display: block;
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+}
+
+.presentation-viewer--loaded .presentation-viewer__preview {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.presentation-viewer:not(.presentation-viewer--loaded) .project-detail__slides {
+  pointer-events: none;
 }
 
 .presentation-viewer__status {
   position: absolute;
-  inset: 0;
-  z-index: 1;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 0.75rem;
   border: 1px solid var(--line);
   border-radius: 12px;
   background: var(--bg-raised);
@@ -35,4 +67,5 @@
 
 @media (prefers-reduced-motion: reduce) {
   .presentation-viewer__spinner { animation: none; }
+  .presentation-viewer__preview { transition: none; }
 }
