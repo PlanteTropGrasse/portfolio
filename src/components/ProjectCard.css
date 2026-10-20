@@ -5,7 +5,8 @@
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--bg-raised);
-  overflow: hidden;
+  overflow: visible;
+  isolation: isolate;
   transition:
     opacity 0.8s var(--ease),
     transform 0.8s var(--ease),
@@ -15,17 +16,19 @@
 .project-card::before {
   content: '';
   position: absolute;
-  inset: auto -20% -60% auto;
-  width: 70%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow: 0 0 14px 2px rgba(255, 90, 31, 0.3), 0 0 38px 8px rgba(255, 90, 31, 0.14);
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity 0.6s var(--ease);
+  animation: project-card-glow 3s ease-in-out infinite alternate;
+  animation-play-state: paused;
   pointer-events: none;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-visible {
   border-color: rgba(255, 90, 31, 0.5);
 }
 
@@ -37,8 +40,23 @@
   transform: translateY(-4px);
 }
 
-.project-card:hover::before {
+.project-card:hover::before,
+.project-card:focus-visible::before {
   opacity: 1;
+  animation-play-state: running;
+}
+
+@keyframes project-card-glow {
+  to {
+    box-shadow: 0 0 22px 4px rgba(255, 90, 31, 0.48), 0 0 55px 12px rgba(255, 90, 31, 0.23);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card::before {
+    animation: none;
+    transition: none;
+  }
 }
 
 .project-card__cta {
@@ -55,6 +73,7 @@
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: 17px 17px 0 0;
   background: var(--bg);
 }
 

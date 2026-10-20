@@ -1,0 +1,38 @@
+.presentation-viewer {
+  position: relative;
+}
+
+.presentation-viewer__status {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg-raised);
+  color: var(--ink);
+  text-align: center;
+  pointer-events: none;
+}
+
+.presentation-viewer__spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--line);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: presentation-spin 1s linear infinite;
+}
+
+@keyframes presentation-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .presentation-viewer__spinner { animation: none; }
+}

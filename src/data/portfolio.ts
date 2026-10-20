@@ -4,6 +4,7 @@ import type {
   Education,
   Experience,
   NavSection,
+  Presentation,
   Project,
   ProjectCategory,
   Skill,
@@ -78,6 +79,12 @@ export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
 ];
 
 export const homeProjects = { title: 'Latest projects' };
+
+const presentation = (title: string, id: string, delay: number): Presentation => {
+  const base = `https://docs.google.com/presentation/d/e/${id}`;
+  const params = `start=false&loop=false&delayms=${delay}`;
+  return { title, embedUrl: `${base}/embed?${params}`, url: `${base}/pub?${params}` };
+};
 
 // Latest projects first — the home page previews the first three entries.
 export const projects: Project[] = [
@@ -371,6 +378,11 @@ export const projects: Project[] = [
   },
   {
     id: 'sang-pourcent',
+    presentations: [
+      presentation('Idea pitchdeck', '2PACX-1vSKHFSCpA0x_DqSgkR9J2vQrpTzF0c4Vm-UwEiXkWLqKo4AyzKfO114z9viLrJSywjPD9YuyweDT24H', 5000),
+      presentation('Demo presentation', '2PACX-1vR39hCyogFZkdR8BPx-BH76KUlKJgaK7aB_Skkss4U2Cnzpw3PSI1scWTOt6QGGvMB4dUf80bEGSsGJ', 5000),
+      presentation('Behaviour Design', '2PACX-1vSYI9yOml6COpsm91CqCMy1aSzEy1RTsmPEqCdVPov64fZBjMdJE7AFu1WImEiTMnVfE_X0iK3_SdTk', 5000),
+    ],
     media: [
       {
         "type": "video",
@@ -426,6 +438,9 @@ export const projects: Project[] = [
   },
   {
     id: 'gogolem',
+    presentations: [
+      presentation('Demo presentation', '2PACX-1vRgUYeoa2CSXdCwZcFeyIERK6RMxROYObAYuBY9mjbS_S2YQSXWFfDiv-lzwM7vpIeFa3sevYdGtiQr', 5000),
+    ],
     media: [
       {
         "type": "video",
@@ -477,11 +492,10 @@ export const projects: Project[] = [
   },
   {
     id: 'hansel-gretel',
-    presentation: {
-      title: 'Hansel & Gretel GO — Design Presentation',
-      embedUrl: 'https://docs.google.com/presentation/d/e/2PACX-1vTDFtmsUhQYVZ_iQ0e0dHT1S4KM7opj0bKkrCaaxAhlB2bD3Eki_tGWyci4Zex-s3nfl00kZPlpZzu_/embed?start=false&loop=true&delayms=30000',
-      url: 'https://docs.google.com/presentation/d/e/2PACX-1vTDFtmsUhQYVZ_iQ0e0dHT1S4KM7opj0bKkrCaaxAhlB2bD3Eki_tGWyci4Zex-s3nfl00kZPlpZzu_/pub?start=false&loop=true&delayms=30000',
-    },
+    presentations: [
+      presentation('Hansel & Gretel GO — Design Presentation', '2PACX-1vQPLO6qYRtwoIWRHQriDOguCyc5Yxajg-udWwpG53DiLiXoq16zpir3ZP0cUTOCQ5rdBcAtbe5WCYHb', 10000),
+      presentation('One Page Designs', '2PACX-1vSuPyFL7i-Ivmc9-LLTZlzpri8c1eznJT9ETKuyn5pBLo2lHEUB5EG11r3VyGpVEyrc6KmUYHYwtBQk', 10000),
+    ],
     media: [
       {
         "type": "image",

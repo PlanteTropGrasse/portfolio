@@ -1,4 +1,5 @@
 import type { Project } from '../data/types';
+import PresentationViewer from './PresentationViewer';
 import './ProjectDetail.css';
 
 type Props = {
@@ -89,23 +90,9 @@ export default function ProjectDetail({ project, onBack }: Props) {
             </div>
           )}
 
-          {project.presentation && (
-            <div className="project-detail__section">
-              <h2 className="display-sm project-detail__section-title">{project.presentation.title}</h2>
-              <iframe
-                className="project-detail__slides"
-                src={project.presentation.embedUrl}
-                title={project.presentation.title}
-                loading="lazy"
-                allowFullScreen
-              />
-              <div className="project-detail__actions">
-                <a className="button" href={project.presentation.url} target="_blank" rel="noopener noreferrer">
-                  Open presentation <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-          )}
+          {project.presentations?.map((presentation) => (
+            <PresentationViewer key={presentation.embedUrl} presentation={presentation} />
+          ))}
 
           {project.team && project.team.length > 0 && (
             <div className="project-detail__section">

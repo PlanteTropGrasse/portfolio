@@ -1,5 +1,7 @@
 export type ProjectCategory = 'Professional' | 'Student' | 'Personal';
 
+export type Presentation = { title: string; embedUrl: string; url: string };
+
 export type Project = {
   id: string; // unique slug e.g. "bastos"
   title: string;
@@ -13,7 +15,7 @@ export type Project = {
   longDescription?: string[];
   highlights?: string[];
   medium?: string;
-  presentation?: { title: string; embedUrl: string; url: string };
+  presentations?: Presentation[];
   context?: string;
   team?: { name: string; role: string; url?: string }[];
   credits?: string;
