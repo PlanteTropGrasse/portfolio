@@ -51,11 +51,11 @@ export const about = {
 
 export const skills: Skill[] = [
   { name: 'Game & Systems Design', detail: 'Core gameplay loops, balancing, interactive mechanics and rules design' },
-  { name: 'Level Design & Pacing', detail: 'Player flow, spatial readability, guidance and encounter sequencing' },
-  { name: 'Engine Prototyping', detail: 'Rapid iteration in Unity (C#) and Unreal Engine (Blueprints)' },
+  { name: 'Game Pacing', detail: 'Player flow, spatial readability, guidance and encounter sequencing' },
+  { name: 'Engine Prototyping', detail: 'Rapid iteration on Unity or Unreal Engine, through AI pipelines' },
   { name: 'Gameplay Programming', detail: 'Gameplay logic implementation in C# and C++, custom tooling integration' },
-  { name: 'Game Feel & UX', detail: 'Visual/audio feedback, interface ergonomics and intuitive onboarding' },
-  { name: 'Event & Experience Design', detail: 'Design of real-life team-building games, escape formats and immersive challenges' },
+  { name: 'Game Feel & UX', detail: 'Juiciness, visual/audio feedback, interface ergonomics and intuitive onboarding' },
+  { name: 'Multiplayer Expertise', detail: 'Design of cooperative and competitive experiences across real-life games and video games, encouraging communication, teamwork and player interaction' },
 ];
 
 export const secondarySkills: string[] = [
@@ -63,8 +63,8 @@ export const secondarySkills: string[] = [
   'C / C++',
   'Team-Building Design',
   'Arts & VFX',
-  'Short Films & Video',
-  'Git / Version Control',
+  'Da Vinci Resolve',
+  'Figma',
   'Game Design Docs (GDD)',
   'French (Native)',
   'Spanish (Bilingual)',
@@ -92,6 +92,7 @@ export const projects: Project[] = [
     id: 'wonky-diver',
     trailer: {
       title: 'Wonky Diver — Trailer',
+      featured: true,
       src: '/projects/wonky-diver-trailer.mp4',
       poster: '/projects/wonky-diver-cover.png',
     },
@@ -765,7 +766,7 @@ export const education: Education[] = [
     detail: 'Specialization in game design, gameplay systems balancing, interactive prototyping, and game production management.',
   },
   {
-    degree: 'Higher Education in Sciences & Computer Foundations',
+    degree: 'Bachelor’s Degree in Electronics, Sciences & Computer Foundations',
     school: 'Higher Education',
     duration: 'Initial Curriculum',
     detail: 'Solid foundation in mathematics, algorithmics, C++ / C# programming logic, and computational modeling.',
