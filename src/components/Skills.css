@@ -53,6 +53,7 @@
   display: grid;
   gap: 1.1rem;
   margin-top: 3rem;
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
 @media (max-width: 860px) {
