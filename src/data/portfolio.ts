@@ -90,6 +90,11 @@ const presentation = (title: string, id: string, delay: number, start = false): 
 export const projects: Project[] = [
   {
     id: 'wonky-diver',
+    trailer: {
+      title: 'Wonky Diver — Trailer',
+      src: '/projects/wonky-diver-trailer.mp4',
+      poster: '/projects/wonky-diver-cover.png',
+    },
     title: 'Wonky Diver',
     duration: 'Coming soon',
     role: 'Details coming soon',
@@ -107,6 +112,11 @@ export const projects: Project[] = [
   },
   {
     id: 'wonky-race',
+    trailer: {
+      title: 'Wonky Race — Trailer',
+      src: '/projects/wonky-race-trailer.mp4',
+      poster: '/projects/wonky-race-cover.png',
+    },
     title: 'Wonky Race',
     duration: 'Coming soon',
     role: 'Details coming soon',

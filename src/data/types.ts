@@ -16,6 +16,7 @@ export type Project = {
   highlights?: string[];
   medium?: string;
   presentations?: Presentation[];
+  trailer?: { title: string; src: string; poster: string };
   context?: string;
   team?: { name: string; role: string; url?: string }[];
   credits?: string;

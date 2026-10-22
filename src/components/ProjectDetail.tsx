@@ -95,6 +95,18 @@ export default function ProjectDetail({ project, onBack }: Props) {
             <PresentationViewer key={presentation.embedUrl} presentation={presentation} />
           ))}
 
+          {project.trailer && (
+            <div className="project-detail__section">
+              <h2 className="display-sm project-detail__section-title">{project.trailer.title}</h2>
+              <div className="project-detail__gallery">
+                <video controls playsInline preload="none" poster={mediaSrc(project.trailer.poster)} aria-label={project.trailer.title}>
+                  <source src={mediaSrc(project.trailer.src)} type="video/mp4" />
+                  <a href={mediaSrc(project.trailer.src)}>Download the trailer</a>
+                </video>
+              </div>
+            </div>
+          )}
+
           {project.team && project.team.length > 0 && (
             <div className="project-detail__section">
               <h2 className="display-sm project-detail__section-title">Team & Credits</h2>
