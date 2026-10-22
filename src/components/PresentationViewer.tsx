@@ -4,13 +4,15 @@ import './PresentationViewer.css';
 
 export default function PresentationViewer({ presentation }: { presentation: Presentation }) {
   const [status, setStatus] = useState<'loading' | 'loaded' | 'error'>('loading');
-  const previewSrc = `${import.meta.env.BASE_URL}${presentation.previewImage.replace(/^\//, '')}`;
+  const previewSrc = presentation.previewImage
+    ? `${import.meta.env.BASE_URL}${presentation.previewImage.replace(/^\//, '')}`
+    : null;
 
   return (
     <div className="project-detail__section">
       <h2 className="display-sm project-detail__section-title">{presentation.title}</h2>
-      <div className={`presentation-viewer${status === 'loaded' ? ' presentation-viewer--loaded' : ''}`} aria-busy={status === 'loading'}>
-        <img className="presentation-viewer__preview" src={previewSrc} alt={`${presentation.title} — first slide`} loading="eager" aria-hidden={status === 'loaded'} />
+      <div className={`presentation-viewer${status === 'loaded' ? ' presentation-viewer--loaded' : ''}${!previewSrc ? ' presentation-viewer--live' : ''}`} aria-busy={status === 'loading'}>
+        {previewSrc && <img className="presentation-viewer__preview" src={previewSrc} alt={`${presentation.title} — first slide`} loading="eager" aria-hidden={status === 'loaded'} />}
         {(status === 'loading' || status === 'error') && (
           <div className="presentation-viewer__status" role="status" aria-live="polite">
             {status === 'loading' && <span className="presentation-viewer__spinner" aria-hidden="true" />}
@@ -22,8 +24,8 @@ export default function PresentationViewer({ presentation }: { presentation: Pre
           src={presentation.embedUrl}
           title={presentation.title}
           loading="eager"
-          tabIndex={status === 'loaded' ? 0 : -1}
-          aria-hidden={status !== 'loaded'}
+          tabIndex={status === 'loaded' || !previewSrc ? 0 : -1}
+          aria-hidden={!!previewSrc && status !== 'loaded'}
           allowFullScreen
           onLoad={() => setStatus('loaded')}
           onError={() => setStatus('error')}

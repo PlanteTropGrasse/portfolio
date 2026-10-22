@@ -29,7 +29,7 @@
   pointer-events: none;
 }
 
-.presentation-viewer:not(.presentation-viewer--loaded) .project-detail__slides {
+.presentation-viewer:not(.presentation-viewer--loaded):not(.presentation-viewer--live) .project-detail__slides {
   pointer-events: none;
 }
 

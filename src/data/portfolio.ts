@@ -96,8 +96,14 @@ export const projects: Project[] = [
     tags: [],
     category: 'Professional',
     description: 'Project details coming soon.',
-    image: '/projects/placeholder.svg',
-    imageAlt: 'Wonky Diver — project preview coming soon',
+    image: '/projects/wonky-diver-cover.png',
+    imageAlt: 'Wonky Diver cover art with a diver and underwater creatures',
+    longDescription: ['Overview and concept details coming soon.'],
+    presentations: [{
+      title: 'Wonky Diver — Presentation',
+      embedUrl: 'https://docs.google.com/presentation/d/e/2PACX-1vR4fqyu8BtkOLmmyZ2TNvTWTWg4xIUxA8cUdZE-I7a_SbOcJNc9dVa6UrtDvzcoII9AP-4LZILhzfdr/embed?start=true&loop=false&delayms=5000',
+      url: 'https://docs.google.com/presentation/d/e/2PACX-1vR4fqyu8BtkOLmmyZ2TNvTWTWg4xIUxA8cUdZE-I7a_SbOcJNc9dVa6UrtDvzcoII9AP-4LZILhzfdr/pub?start=true&loop=false&delayms=5000',
+    }],
   },
   {
     id: 'wonky-race',
@@ -107,8 +113,14 @@ export const projects: Project[] = [
     tags: [],
     category: 'Professional',
     description: 'Project details coming soon.',
-    image: '/projects/placeholder.svg',
-    imageAlt: 'Wonky Race — project preview coming soon',
+    image: '/projects/wonky-race-cover.png',
+    imageAlt: 'Wonky Race cover art with colorful racers on a tropical track',
+    longDescription: ['Overview and concept details coming soon.'],
+    presentations: [{
+      title: 'Wonky Race — Presentation',
+      embedUrl: 'https://docs.google.com/presentation/d/e/2PACX-1vR4fqyu8BtkOLmmyZ2TNvTWTWg4xIUxA8cUdZE-I7a_SbOcJNc9dVa6UrtDvzcoII9AP-4LZILhzfdr/embed?start=true&loop=false&delayms=5000',
+      url: 'https://docs.google.com/presentation/d/e/2PACX-1vR4fqyu8BtkOLmmyZ2TNvTWTWg4xIUxA8cUdZE-I7a_SbOcJNc9dVa6UrtDvzcoII9AP-4LZILhzfdr/pub?start=true&loop=false&delayms=5000',
+    }],
   },
   {
     id: 'my-lil-pot-utah',
@@ -193,6 +205,7 @@ export const projects: Project[] = [
   },
   {
     id: 'lego-pharaons',
+    links: [{ label: 'Watch the Pharaohs’ LEGO trailer', url: 'https://www.youtube.com/watch?v=rC3deKuH9pI' }],
     media: [
       {
         "type": "image",
@@ -229,6 +242,7 @@ export const projects: Project[] = [
   },
   {
     id: 'cirque-ia',
+    links: [{ label: 'Watch the AI Circus trailer', url: 'https://www.youtube.com/watch?v=d_Gjuun_8vw' }],
     media: [
       {
         "type": "image",

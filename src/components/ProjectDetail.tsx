@@ -1,5 +1,6 @@
 import type { Project } from '../data/types';
 import PresentationViewer from './PresentationViewer';
+import YouTubeViewer from './YouTubeViewer';
 import './ProjectDetail.css';
 
 type Props = {
@@ -132,6 +133,11 @@ export default function ProjectDetail({ project, onBack }: Props) {
               </div>
             </div>
           )}
+
+          {project.links?.map((link) => (
+            <YouTubeViewer key={link.url} url={link.url} title={link.label} />
+          ))}
+          {project.linkUrl && <YouTubeViewer url={project.linkUrl} title={project.linkLabel ?? project.title} />}
 
           {project.links && project.links.length > 0 && (
             <div className="project-detail__section">
