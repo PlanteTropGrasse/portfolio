@@ -1,6 +1,6 @@
 # Adrian Proust — Game Design Portfolio
 
-A single-page portfolio for Adrian Proust, Junior Game Designer. It's one long scrolling page with four full-screen sections (Home, Projects, About me, My Resume) and a bold editorial look: huge display type, numbered mono labels and outlined marquee banners between sections.
+A single-page portfolio for Adrian Proust, Game Designer. It's one long scrolling page with four full-screen sections (Home, Projects, About me, My Resume) and a bold editorial look: huge display type, numbered mono labels and outlined marquee banners between sections.
 
 ## Features
 

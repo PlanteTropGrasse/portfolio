@@ -16,11 +16,11 @@ export type Project = {
   highlights?: string[];
   medium?: string;
   presentations?: Presentation[];
-  trailer?: { title: string; src: string; poster: string };
+  trailer?: { title: string; src: string; poster: string; featured?: boolean };
   context?: string;
   team?: { name: string; role: string; url?: string }[];
   credits?: string;
-  links?: { label: string; url: string }[];
+  links?: { label: string; url: string; featuredVideo?: boolean }[];
   media?: { type: 'image' | 'video'; src: string; alt: string; caption?: string; poster?: string }[];
   linkUrl?: string;
   linkLabel?: string;

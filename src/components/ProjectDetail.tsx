@@ -17,6 +17,12 @@ const mediaSrc = (src: string) => src.startsWith('/')
 
 export default function ProjectDetail({ project, onBack }: Props) {
   const imageSrc = mediaSrc(project.image);
+  const featuredVideo = project.links?.find((link) => link.featuredVideo);
+  const featuredTrailer = project.trailer?.featured ? project.trailer : null;
+  const mediaGroups = [
+    { title: 'Videos', items: project.media?.filter((item) => item.type === 'video') ?? [] },
+    { title: 'Photo Gallery', items: project.media?.filter((item) => item.type === 'image') ?? [] },
+  ].filter((group) => group.items.length > 0);
 
   return (
     <article className="project-detail">
@@ -48,12 +54,19 @@ export default function ProjectDetail({ project, onBack }: Props) {
           </ul>
         </header>
 
-        <div className="project-detail__media-wrapper">
-          <img
+        <div className={`project-detail__media-wrapper${featuredVideo || featuredTrailer ? ' project-detail__media-wrapper--video' : ''}`}>
+          {featuredTrailer ? (
+            <video controls playsInline preload="none" poster={mediaSrc(featuredTrailer.poster)} aria-label={featuredTrailer.title}>
+              <source src={mediaSrc(featuredTrailer.src)} type="video/mp4" />
+              <a href={mediaSrc(featuredTrailer.src)}>Download the trailer</a>
+            </video>
+          ) : featuredVideo ? (
+            <YouTubeViewer url={featuredVideo.url} title={featuredVideo.label} featured />
+          ) : <img
             src={imageSrc}
             alt={project.imageAlt}
             className="project-detail__main-image"
-          />
+          />}
         </div>
 
         <section className="project-detail__content">
@@ -95,7 +108,7 @@ export default function ProjectDetail({ project, onBack }: Props) {
             <PresentationViewer key={presentation.embedUrl} presentation={presentation} />
           ))}
 
-          {project.trailer && (
+          {project.trailer && !featuredTrailer && (
             <div className="project-detail__section">
               <h2 className="display-sm project-detail__section-title">{project.trailer.title}</h2>
               <div className="project-detail__gallery">
@@ -123,11 +136,16 @@ export default function ProjectDetail({ project, onBack }: Props) {
             </div>
           )}
 
-          {project.media && project.media.length > 0 && (
-            <div className="project-detail__section">
-              <h2 className="display-sm project-detail__section-title">Gallery & Video</h2>
+          {project.links?.filter((link) => link !== featuredVideo).map((link) => (
+            <YouTubeViewer key={link.url} url={link.url} title={link.label} />
+          ))}
+          {project.linkUrl && <YouTubeViewer url={project.linkUrl} title={project.linkLabel ?? project.title} />}
+
+          {mediaGroups.map((group) => (
+            <div className="project-detail__section" key={group.title}>
+              <h2 className="display-sm project-detail__section-title">{group.title}</h2>
               <div className="project-detail__gallery">
-                {project.media.map((item) => (
+                {group.items.map((item) => (
                   <figure key={item.src}>
                     {item.type === 'video' ? (
                       <video controls playsInline preload="none" poster={item.poster && mediaSrc(item.poster)} aria-label={item.alt}>
@@ -144,12 +162,7 @@ export default function ProjectDetail({ project, onBack }: Props) {
                 ))}
               </div>
             </div>
-          )}
-
-          {project.links?.map((link) => (
-            <YouTubeViewer key={link.url} url={link.url} title={link.label} />
           ))}
-          {project.linkUrl && <YouTubeViewer url={project.linkUrl} title={project.linkLabel ?? project.title} />}
 
           {project.links && project.links.length > 0 && (
             <div className="project-detail__section">

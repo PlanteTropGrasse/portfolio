@@ -114,6 +114,7 @@ export const projects: Project[] = [
     id: 'wonky-race',
     trailer: {
       title: 'Wonky Race — Trailer',
+      featured: true,
       src: '/projects/wonky-race-trailer.mp4',
       poster: '/projects/wonky-race-cover.png',
     },
@@ -211,11 +212,11 @@ export const projects: Project[] = [
       'The game is designed to showcase the host’s acting and improvisation skills while encouraging interaction. Over 90 minutes, these elements can create a warm, familiar atmosphere and sometimes even contagious excitement in a corporate setting that usually feels very different.',
     ],
     credits: '© Les Coqs en Pâte',
-    links: [{ label: 'Watch the POWER Quiz trailer', url: 'https://www.youtube.com/watch?v=SgShqjr9Nfk' }],
+    links: [{ label: 'Watch the POWER Quiz trailer', url: 'https://www.youtube.com/watch?v=SgShqjr9Nfk', featuredVideo: true }],
   },
   {
     id: 'lego-pharaons',
-    links: [{ label: 'Watch the Pharaohs’ LEGO trailer', url: 'https://www.youtube.com/watch?v=rC3deKuH9pI' }],
+    links: [{ label: 'Watch the Pharaohs’ LEGO trailer', url: 'https://www.youtube.com/watch?v=rC3deKuH9pI', featuredVideo: true }],
     media: [
       {
         "type": "image",
@@ -252,7 +253,7 @@ export const projects: Project[] = [
   },
   {
     id: 'cirque-ia',
-    links: [{ label: 'Watch the AI Circus trailer', url: 'https://www.youtube.com/watch?v=d_Gjuun_8vw' }],
+    links: [{ label: 'Watch the AI Circus trailer', url: 'https://www.youtube.com/watch?v=d_Gjuun_8vw', featuredVideo: true }],
     media: [
       {
         "type": "image",

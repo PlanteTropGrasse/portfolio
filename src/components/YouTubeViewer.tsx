@@ -18,22 +18,26 @@ function videoId(url: string): string | null {
   }
 }
 
-export default function YouTubeViewer({ url, title }: { url: string; title: string }) {
+export default function YouTubeViewer({ url, title, featured = false }: { url: string; title: string; featured?: boolean }) {
   const id = videoId(url);
   if (!id) return null;
+
+  const player = <iframe
+        className="youtube-viewer"
+        src={`https://www.youtube-nocookie.com/embed/${id}`}
+        title={title}
+        loading={featured ? 'eager' : 'lazy'}
+        allow="encrypted-media; picture-in-picture; fullscreen"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />;
+
+  if (featured) return player;
 
   return (
     <div className="project-detail__section">
       <h2 className="display-sm project-detail__section-title">{title}</h2>
-      <iframe
-        className="youtube-viewer"
-        src={`https://www.youtube-nocookie.com/embed/${id}`}
-        title={title}
-        loading="lazy"
-        allow="encrypted-media; picture-in-picture; fullscreen"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      />
+      {player}
     </div>
   );
 }
