@@ -1,6 +1,6 @@
 export type ProjectCategory = 'Professional' | 'Student' | 'Personal';
 
-export type Presentation = { title: string; embedUrl: string; url: string; previewImage?: string };
+export type Presentation = { title: string; embedUrl: string; url: string };
 
 export type Project = {
   id: string; // unique slug e.g. "bastos"

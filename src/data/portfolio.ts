@@ -80,10 +80,10 @@ export const projectCategories: { id: ProjectCategory; blurb: string }[] = [
 
 export const homeProjects = { title: 'Latest projects' };
 
-const presentation = (title: string, id: string, delay: number, preview: string): Presentation => {
+const presentation = (title: string, id: string, delay: number, start = false): Presentation => {
   const base = `https://docs.google.com/presentation/d/e/${id}`;
-  const params = `start=false&loop=false&delayms=${delay}`;
-  return { title, embedUrl: `${base}/embed?${params}`, url: `${base}/pub?${params}`, previewImage: `/projects/${preview}.webp` };
+  const params = `start=${start}&loop=false&delayms=${delay}`;
+  return { title, embedUrl: `${base}/embed?${params}`, url: `${base}/pub?${params}` };
 };
 
 // Latest projects first — the home page previews the first three entries.
@@ -101,8 +101,8 @@ export const projects: Project[] = [
     longDescription: ['Overview and concept details coming soon.'],
     presentations: [{
       title: 'Wonky Diver — Presentation',
-      embedUrl: 'https://docs.google.com/presentation/d/e/2PACX-1vR4fqyu8BtkOLmmyZ2TNvTWTWg4xIUxA8cUdZE-I7a_SbOcJNc9dVa6UrtDvzcoII9AP-4LZILhzfdr/embed?start=true&loop=false&delayms=5000',
-      url: 'https://docs.google.com/presentation/d/e/2PACX-1vR4fqyu8BtkOLmmyZ2TNvTWTWg4xIUxA8cUdZE-I7a_SbOcJNc9dVa6UrtDvzcoII9AP-4LZILhzfdr/pub?start=true&loop=false&delayms=5000',
+      embedUrl: 'https://docs.google.com/presentation/d/e/2PACX-1vQ7TDfKztYvEkjcPnLeEDDGmlMf1bMgQWr2W4C-slwFu43ivx7oJQvocVCxSSfqD2H0n9_cqtK69CpV/embed?start=true&loop=false&delayms=5000',
+      url: 'https://docs.google.com/presentation/d/e/2PACX-1vQ7TDfKztYvEkjcPnLeEDDGmlMf1bMgQWr2W4C-slwFu43ivx7oJQvocVCxSSfqD2H0n9_cqtK69CpV/pub?start=true&loop=false&delayms=5000',
     }],
   },
   {
@@ -393,9 +393,9 @@ export const projects: Project[] = [
   {
     id: 'sang-pourcent',
     presentations: [
-      presentation('Idea pitchdeck', '2PACX-1vSKHFSCpA0x_DqSgkR9J2vQrpTzF0c4Vm-UwEiXkWLqKo4AyzKfO114z9viLrJSywjPD9YuyweDT24H', 5000, 'sang-idea-first-slide'),
-      presentation('Demo presentation', '2PACX-1vR39hCyogFZkdR8BPx-BH76KUlKJgaK7aB_Skkss4U2Cnzpw3PSI1scWTOt6QGGvMB4dUf80bEGSsGJ', 5000, 'sang-demo-first-slide'),
-      presentation('Behaviour Design', '2PACX-1vSYI9yOml6COpsm91CqCMy1aSzEy1RTsmPEqCdVPov64fZBjMdJE7AFu1WImEiTMnVfE_X0iK3_SdTk', 5000, 'sang-behaviour-first-slide'),
+      presentation('Idea pitchdeck', '2PACX-1vSKHFSCpA0x_DqSgkR9J2vQrpTzF0c4Vm-UwEiXkWLqKo4AyzKfO114z9viLrJSywjPD9YuyweDT24H', 5000),
+      presentation('Demo presentation', '2PACX-1vR39hCyogFZkdR8BPx-BH76KUlKJgaK7aB_Skkss4U2Cnzpw3PSI1scWTOt6QGGvMB4dUf80bEGSsGJ', 5000, true),
+      presentation('Behaviour Design', '2PACX-1vSYI9yOml6COpsm91CqCMy1aSzEy1RTsmPEqCdVPov64fZBjMdJE7AFu1WImEiTMnVfE_X0iK3_SdTk', 5000, true),
     ],
     media: [
       {
@@ -453,7 +453,7 @@ export const projects: Project[] = [
   {
     id: 'gogolem',
     presentations: [
-      presentation('Demo presentation', '2PACX-1vRgUYeoa2CSXdCwZcFeyIERK6RMxROYObAYuBY9mjbS_S2YQSXWFfDiv-lzwM7vpIeFa3sevYdGtiQr', 5000, 'gogolem-demo-first-slide'),
+      presentation('Demo presentation', '2PACX-1vRgUYeoa2CSXdCwZcFeyIERK6RMxROYObAYuBY9mjbS_S2YQSXWFfDiv-lzwM7vpIeFa3sevYdGtiQr', 5000),
     ],
     media: [
       {
@@ -507,8 +507,8 @@ export const projects: Project[] = [
   {
     id: 'hansel-gretel',
     presentations: [
-      presentation('Hansel & Gretel GO — Design Presentation', '2PACX-1vQPLO6qYRtwoIWRHQriDOguCyc5Yxajg-udWwpG53DiLiXoq16zpir3ZP0cUTOCQ5rdBcAtbe5WCYHb', 10000, 'hansel-design-first-slide'),
-      presentation('One Page Designs', '2PACX-1vSuPyFL7i-Ivmc9-LLTZlzpri8c1eznJT9ETKuyn5pBLo2lHEUB5EG11r3VyGpVEyrc6KmUYHYwtBQk', 10000, 'hansel-one-page-first-slide'),
+      presentation('Hansel & Gretel GO — Design Presentation', '2PACX-1vQPLO6qYRtwoIWRHQriDOguCyc5Yxajg-udWwpG53DiLiXoq16zpir3ZP0cUTOCQ5rdBcAtbe5WCYHb', 5000, true),
+      presentation('One Page Designs', '2PACX-1vSuPyFL7i-Ivmc9-LLTZlzpri8c1eznJT9ETKuyn5pBLo2lHEUB5EG11r3VyGpVEyrc6KmUYHYwtBQk', 10000),
     ],
     media: [
       {
