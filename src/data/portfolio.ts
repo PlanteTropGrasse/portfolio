@@ -139,7 +139,7 @@ export const projects: Project[] = [
     title: "My lil' pot Utah",
     duration: 'January 2026 · 1 week',
     role: 'Game Designer & Game Artist',
-    tags: ['Unreal Engine 5', 'Game Jam', 'Arcade', 'Windows'],
+    tags: ['Unreal Engine 5', 'Game Jam', 'Arcade'],
     category: 'Personal',
     description: 'Help Utah, your virtual teapot assistant, fight rogue 3D assets with a bouncing ball. Control its rebounds, survive, and chase a high score.',
     image: '/projects/utah-screenshot-1.png',
