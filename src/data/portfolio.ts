@@ -47,7 +47,7 @@ export const socials: SocialLink[] = [
 ];
 
 export const about = {
-  lead: 'Trilingual Game Design Expert',
+  lead: 'Trilingual Game Design Enthusiast',
   paragraphs: [
     'This portfolio offers a glimpse into the creative thinking I have explored in recent years across different projects and fields.',
     'Whether in video games or live events, I cannot help but take a fresh, critical look at the games I create or play.',
@@ -67,14 +67,11 @@ export const skills: Skill[] = [
 export const secondarySkills: string[] = [
   'Unreal Engine',
   'C / C++',
-  'Team-Building Design',
+  'IRL Event Design',
   'Arts & VFX',
   'Da Vinci Resolve',
   'Figma',
   'Game Design Docs (GDD)',
-  'French (Native)',
-  'Spanish (Bilingual)',
-  'English (Fluent)',
 ];
 
 // Project categories, in filter order.
@@ -103,9 +100,9 @@ export const projects: Project[] = [
       poster: '/projects/wonky-diver-cover.png',
     },
     title: 'Wonky Diver',
-    duration: 'Coming soon',
+    duration: '2026',
     role: 'Details coming soon',
-    tags: ['Exploration', 'Adventure', 'Underwater', 'Creature Interactions', 'Gear Upgrades'],
+    tags: ['Unreal Engine', 'Exploration', 'Adventure', 'Underwater', 'Creature Interactions'],
     category: 'Professional',
     description: 'Explore a hostile alien ocean as a barely qualified diver. Study strange creatures, gather resources, and upgrade your gear to reach deeper biomes and uncover new paths.',
     image: '/projects/wonky-diver-cover.png',
@@ -126,9 +123,9 @@ export const projects: Project[] = [
       poster: '/projects/wonky-race-cover.png',
     },
     title: 'Wonky Race',
-    duration: 'Coming soon',
+    duration: '2026',
     role: 'Details coming soon',
-    tags: ['Party Game', 'Multiplayer', 'Racing', 'Physics-Based Combat', 'Arena Battles'],
+    tags: ['Unreal Engine', 'Party Game', 'Multiplayer', 'Racing', 'Physics-Based Combat', 'Arena Battles'],
     category: 'Professional',
     description: 'A chaotic multiplayer brawl-racer for up to six players. Race through dangerous courses, slap and grab your rivals, then battle in arenas where each round brings a new challenge.',
     image: '/projects/wonky-race-cover.png',

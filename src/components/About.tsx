@@ -3,7 +3,6 @@ import MarqueeBanner from './MarqueeBanner';
 import SectionLabel from './SectionLabel';
 import Skills from './Skills';
 import Education from './Education';
-import Experience from './Experience';
 import Contact from './Contact';
 import './About.css';
 
@@ -25,7 +24,6 @@ export default function About() {
         </div>
         <Skills />
         <Education />
-        <Experience />
       </div>
       <Contact />
     </section>
