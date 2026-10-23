@@ -13,7 +13,7 @@ export default function Contact() {
         <p className="label reveal">Contact</p>
         <h2 className="contact__title reveal">
           Let's make some{' '}
-          <span className="accent-outline">fun art.</span>
+          <span className="contact__highlight accent-outline">fun art.</span>
         </h2>
         <ul className="contact__list">
           {channels.map((channel) => (

@@ -13,6 +13,11 @@
   text-transform: uppercase;
 }
 
+.contact__highlight {
+  display: block;
+  white-space: nowrap;
+}
+
 .contact__list {
   border-top: 1px solid var(--line);
 }

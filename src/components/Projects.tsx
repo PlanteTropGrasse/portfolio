@@ -30,8 +30,8 @@ export default function Projects({ onSelectProject }: Props) {
             work<span className="accent">.</span>
           </h2>
           <p className="projects__intro">
-            {projects.length} projects across released games, school productions and rapid
-            prototypes — each one taught me something about players.
+            {projects.length} projects across released games, school productions and game jam
+            prototypes. Each one taught me meaningful lessons.
           </p>
         </div>
 
