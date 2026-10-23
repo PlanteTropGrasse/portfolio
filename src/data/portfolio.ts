@@ -21,6 +21,11 @@ export const profile = {
   firstName: 'Adrian',
   lastName: 'Proust',
   title: 'Game Designer',
+  languages: [
+    { name: 'English', flag: '/flags/english.svg' },
+    { name: 'Spanish', flag: '/flags/spanish.svg' },
+    { name: 'French', flag: '/flags/french.svg' },
+  ],
   currentStudio: 'ICAN',
   yearsOfExperience: 2,
   shippedTitles: 6,
@@ -30,7 +35,7 @@ export const profile = {
 
 export const contact = {
   email: 'adrianproust@gmail.com',
-  linkedin: { label: 'Adrian Proust', url: 'https://www.linkedin.com/in/adrian-proust' },
+  linkedin: { label: 'Adrian Proust', url: 'https://www.linkedin.com/in/adrian-proust/?isSelfProfile=true' },
   artstation: { label: 'adrian_proust', url: 'https://adrian_proust.artstation.com/' },
   phone: '',
 };
@@ -42,10 +47,11 @@ export const socials: SocialLink[] = [
 ];
 
 export const about = {
-  lead: 'French-Spanish Game Design Master’s graduate from ICAN.',
+  lead: 'Trilingual Game Design Expert',
   paragraphs: [
-    'This portfolio showcases my creative process and design thinking explored across video games, team-building activities, technical C++ & C# projects, and audiovisual productions.',
-    'Passionate about designing engaging and well-balanced interactive systems, I create clear, dynamic, and memorable mechanics, from paper prototyping and documentation to engine implementation.',
+    'This portfolio offers a glimpse into the creative thinking I have explored in recent years across different projects and fields.',
+    'Whether in video games or live events, I cannot help but take a fresh, critical look at the games I create or play.',
+    'These seemingly varied perspectives converge on a single goal: to offer new video game experiences shaped by a sense of freedom.',
   ],
 };
 
@@ -175,6 +181,7 @@ export const projects: Project[] = [
   },
   {
     id: 'power-quiz',
+    showResources: false,
     media: [
       {
         "type": "image",
@@ -554,44 +561,30 @@ export const projects: Project[] = [
   },
   {
     id: 'excroalibur',
-    media: [
-      {
-        "type": "image",
-        "src": "https://static.wixstatic.com/media/4ecbbb_53cc385d3929484981b63c918f222118~mv2.png",
-        "alt": "excroalibur — project image 1"
-      },
-      {
-        "type": "image",
-        "src": "https://static.wixstatic.com/media/4ecbbb_991eb5054e6e48a2bcd9eca23de8689b~mv2.png",
-        "alt": "excroalibur — project image 2"
-      },
-      {
-        "type": "image",
-        "src": "https://static.wixstatic.com/media/4ecbbb_a58cfeb34ab047eeb0984d99592a6d0d~mv2.png",
-        "alt": "excroalibur — project image 3"
-      },
-      {
-        "type": "image",
-        "src": "https://static.wixstatic.com/media/4ecbbb_ee86e082a5924cb8a767d09616e365c0~mv2.png",
-        "alt": "excroalibur — project image 4"
-      },
-      {
-        "type": "image",
-        "src": "https://static.wixstatic.com/media/4ecbbb_cf8e6154b8ee4062b2e685771fa40249~mv2.png",
-        "alt": "excroalibur — project image 5"
-      }
-    ], title: 'Excroalibur', duration: '2025–ongoing',
-    role: 'Game Designer', category: 'Personal',
-    tags: ['Unity', 'Turn-Based Strategy', 'Progression', 'Roguelike'],
-    description: 'Three frogs steal a legendary sword. Pass it between them to build its power, then throw it at the knights trying to reclaim it.',
-    image: '/projects/excroalibur.png', imageAlt: 'Excroalibur turn-based frog squad',
-    medium: 'Game developed in Unity',
+    title: 'Excroaalibur',
+    duration: 'Released April 21, 2026',
+    role: 'Game Designer',
+    category: 'Personal',
+    tags: ['Unity', 'Turn-Based Tactics', 'Roguelike', 'Singleplayer', 'Free to Play'],
+    description: 'Three unlikely frogs claim a legendary sword and become the kingdom’s targets. Pass the blade to build its power, upgrade your trio, and survive tactical battles along a branching roguelike journey.',
+    image: '/projects/excroaalibur-cover.jpg',
+    imageAlt: 'Excroaalibur Steam cover art',
+    medium: 'Free-to-play single-player game on Steam, developed and published by Grezz Game',
     context: 'I joined the project midway through production, after a prototype had been created, to design a progression system and add a roguelike dimension with upgrades.',
     longDescription: [
-      'Excroalibur is a turn-based strategy game in which the player controls a trio of frogs who have stolen a legendary sword. Waves of knights pursue them to recover it.',
-      'To defend themselves, the frogs can increase the sword’s power by passing it between one another, then throw it at enemies to eliminate them.',
-      'Players must also carefully organize their squad’s positioning to manage an increasingly large crowd of enemies.',
+      'The legendary sword was meant to bring peace to the realm. Instead, three eccentric frogs have taken it, and a hostile medieval world is determined to recover it.',
+      'Pass Excroaalibur between the frogs to strengthen the blade before striking. Coordinating the trio is central to surviving each encounter.',
+      'Between waves, upgrade each companion’s speed, resilience, or affinity with the sword to shape a team around your preferred tactics.',
+      'Choose routes across a branching roguelike map, weighing battles, risks, and rewards. Face increasingly dangerous waves of knights and spellcasters before confronting powerful bosses whose patterns demand careful coordination.',
     ],
+    media: [
+      { type: 'image', src: '/projects/excroaalibur-steam-1.jpg', alt: 'Excroaalibur gameplay — Steam screenshot 1' },
+      { type: 'image', src: '/projects/excroaalibur-steam-2.jpg', alt: 'Excroaalibur gameplay — Steam screenshot 2' },
+      { type: 'image', src: '/projects/excroaalibur-steam-3.jpg', alt: 'Excroaalibur gameplay — Steam screenshot 3' },
+      { type: 'image', src: '/projects/excroaalibur-steam-4.jpg', alt: 'Excroaalibur gameplay — Steam screenshot 4' },
+      { type: 'image', src: '/projects/excroaalibur-steam-5.jpg', alt: 'Excroaalibur gameplay — Steam screenshot 5' },
+    ],
+
     team: [
       { name: 'Adrian PROUST', role: 'Game Designer' },
       { name: 'Vincent LUCAS', role: 'Producer, Art Direction & Game Designer' },
@@ -605,7 +598,7 @@ export const projects: Project[] = [
       { name: 'Julien CARPENTIER', role: 'UX Designer, Game Designer & Social Media Manager' },
       { name: 'Nathan WYNANDS', role: 'Game Designer' },
     ],
-    links: [{ label: 'View Excroalibur on itch.io', url: 'https://asakim-the-mist-warden.itch.io/excroalibur' }],
+    links: [{ label: 'Play Excroaalibur on Steam', url: 'https://store.steampowered.com/app/4392470/Excroaalibur/' }],
   },
   {
     id: 'neutriscore',
@@ -767,7 +760,7 @@ export const education: Education[] = [
   },
   {
     degree: 'Bachelor’s Degree in Electronics, Sciences & Computer Foundations',
-    school: 'Higher Education',
+    school: 'Université Paris-Saclay',
     duration: 'Initial Curriculum',
     detail: 'Solid foundation in mathematics, algorithmics, C++ / C# programming logic, and computational modeling.',
   },

@@ -164,7 +164,7 @@ export default function ProjectDetail({ project, onBack }: Props) {
             </div>
           ))}
 
-          {project.links && project.links.length > 0 && (
+          {project.showResources !== false && project.links && project.links.length > 0 && (
             <div className="project-detail__section">
               <h2 className="display-sm project-detail__section-title">Play & Resources</h2>
               <div className="project-detail__actions">

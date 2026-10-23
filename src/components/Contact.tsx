@@ -12,8 +12,8 @@ export default function Contact() {
       <div className="container">
         <p className="label reveal">Contact</p>
         <h2 className="contact__title reveal">
-          Let's make{' '}
-          <span className="accent-outline">something</span>
+          Let's make some{' '}
+          <span className="accent-outline">fun art.</span>
         </h2>
         <ul className="contact__list">
           {channels.map((channel) => (

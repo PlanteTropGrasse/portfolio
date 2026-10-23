@@ -32,7 +32,14 @@ export default function Hero({ onNavigate, onSelectProject }: Props) {
             <h1 className="hero__title">
               {profile.firstName} <span className="hero__line--outline">{profile.lastName}</span>
             </h1>
-            <p className="hero__subtitle">{profile.title}</p>
+            <p className="hero__subtitle">
+              {profile.title}
+              <span className="hero__languages" aria-label="Languages">
+                {profile.languages.map((language) => (
+                  <img key={language.name} src={`${import.meta.env.BASE_URL}${language.flag.slice(1)}`} alt={language.name} title={language.name} width="24" height="16" />
+                ))}
+              </span>
+            </p>
             <a className="hero__scroll hero__scroll--inline mono" href="?Page=AboutMe" onClick={go('AboutMe')}>
               <span className="hero__scroll-line" aria-hidden="true" />
               Scroll down

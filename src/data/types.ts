@@ -21,6 +21,7 @@ export type Project = {
   team?: { name: string; role: string; url?: string }[];
   credits?: string;
   links?: { label: string; url: string; featuredVideo?: boolean }[];
+  showResources?: boolean;
   media?: { type: 'image' | 'video'; src: string; alt: string; caption?: string; poster?: string }[];
   linkUrl?: string;
   linkLabel?: string;

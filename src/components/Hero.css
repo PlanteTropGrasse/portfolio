@@ -91,11 +91,27 @@
 }
 
 .hero__subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+.hero__languages {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero__languages img {
+  display: block;
+  border-radius: 2px;
+  object-fit: cover;
 }
 
 .hero__tagline {
